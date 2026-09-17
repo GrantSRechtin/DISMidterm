@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8763407944794540250}
   - component: {fileID: 3733853187467696813}
-  - component: {fileID: 7240504914035225302}
+  - component: {fileID: 1494624702805046683}
   m_Layer: 0
   m_Name: TransferBox
   m_TagString: Untagged
@@ -92,8 +92,8 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!58 &7240504914035225302
-CircleCollider2D:
+--- !u!60 &1494624702805046683
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -122,9 +122,24 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.97, y: 1.24}
+    newSize: {x: 0.97, y: 1.24}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.51021725, y: -2.3981586}
+      - {x: 0.2658725, y: -2.0522263}
+      - {x: -0.5775103, y: -0.598882}
+      - {x: -1.2622666, y: -0.7384684}
+  m_UseDelaunayMesh: 1

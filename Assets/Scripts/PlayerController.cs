@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
         rb.linearVelocity=movement*moveSpeed;
     }
 
-    private void UpdateSprite()
+    private void UpdateSprite() //need to update this to animate through the sprites
     {
         if (movement == Vector2.zero)
         {

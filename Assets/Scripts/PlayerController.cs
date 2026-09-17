@@ -1,3 +1,5 @@
+using System;
+using System.Data.Common;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -15,13 +17,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Sprite Down1;
     [SerializeField] private Sprite down2;
    
-    [Header("Left Sprites")]
-    [SerializeField] private Sprite Left1;
-    [SerializeField] private Sprite Left2;
+    [Header("Side Sprites")]
+    [SerializeField] private Sprite Side1;
+    [SerializeField] private Sprite Side2;
 
-    [Header("Right Sprites")]
-    [SerializeField] private Sprite Right1;
-    [SerializeField] private Sprite Right2;
 
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
@@ -42,6 +41,25 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         rb.linearVelocity=movement*moveSpeed;
+    }
+
+    private void UpdateSprite()
+    {
+        if (movement == Vector2.zero)
+        {
+            return;
+        }
+        if (Mathf.Abs(movement.x) > Mathf.Abs(movement.y))
+        {
+            spriteRenderer.sprite=Side1;
+            spriteRenderer.flipX=movement.x<0;
+        }
+        else
+        {
+            spriteRenderer.flipX=false;
+            if(movement.y>0) spriteRenderer.sprite=up1;
+            else if (movement.y>0) spriteRenderer.sprite=Down1;
+        }
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

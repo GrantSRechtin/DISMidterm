@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 5057661106880810773}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.6, z: 0}
+  m_LocalPosition: {x: 0, y: 0.775, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 3650396710866306049, guid: 38057d54beafedb41838fd88dd28ca31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -102,6 +102,7 @@ GameObject:
   - component: {fileID: 8298610618867296412}
   - component: {fileID: 8544465870380560881}
   - component: {fileID: 2464015666432666171}
+  - component: {fileID: 9122951539767298210}
   m_Layer: 0
   m_Name: Key
   m_TagString: Untagged
@@ -172,7 +173,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 1694913177206695654, guid: 2e42c84f44bdbdf4c8b0efe913b37976, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -218,5 +219,18 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 1}
   m_Radius: 10
+--- !u!210 &9122951539767298210
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8307851042914724207}
+  m_Enabled: 1
+  m_SortingLayerID: 1486115909
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
+  m_Sort3DAs2D: 0

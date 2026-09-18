@@ -3,7 +3,7 @@ using System.Data.Common;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerController : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
 
     [Header("Movement Settings")]
@@ -60,17 +60,5 @@ public class PlayerController : MonoBehaviour
             if(movement.y>0) spriteRenderer.sprite=up1;
             else if (movement.y>0) spriteRenderer.sprite=Down1;
         }
-    }
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

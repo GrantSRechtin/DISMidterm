@@ -1,3 +1,4 @@
+using System;
 using JetBrains.Annotations;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -15,12 +16,20 @@ public class PlayerInteractions : MonoBehaviour
     
     private void OnInteract(InputValue value)
     {
-        if (itemInHand)
-        {
-            return;
-        }
+    
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, interactionRadius, interactableLayer);
-        
+        if (!itemInHand)
+        {
+            ItemlessInteract(hitColliders);
+        }
+        else
+        {
+            ItemHeldInteract(hitColliders);
+        }
+    }
+
+    private void ItemlessInteract(Array hitColliders)
+    {
         IInteractable closestInteractable = null;
         float closestDistance = float.MaxValue;
 
@@ -38,6 +47,27 @@ public class PlayerInteractions : MonoBehaviour
         }
 
         closestInteractable?.Interact();
+    }
+
+    private void ItemHeldInteract(Array hitColliders)
+    {
+        IItemInteractable closestInteractable = null;
+        float closestDistance = float.MaxValue;
+
+        foreach (Collider col in hitColliders)
+        {
+            if (col.TryGetComponent<IItemInteractable>(out var interactable))
+            {
+                float distance = Vector3.Distance(transform.position, col.transform.position);
+                if (distance < closestDistance)
+                {
+                    closestDistance = distance;
+                    closestInteractable = interactable;
+                }
+            }
+        }
+
+        closestInteractable?.Interact(itemInHand);
     }
 
     

@@ -26,4 +26,9 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.linearVelocity=movement*moveSpeed;
     }
+
+    public Vector2 GetMovementDirection()
+    {
+        return movement;
+    }
 }

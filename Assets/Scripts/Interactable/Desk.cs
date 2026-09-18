@@ -1,6 +1,8 @@
 using UnityEngine;
 
-public class IItemInteractable : MonoBehaviour
+[RequireComponent(typeof (IInteractable))]
+
+public class Desk : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

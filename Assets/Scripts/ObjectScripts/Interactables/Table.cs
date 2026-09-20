@@ -8,7 +8,7 @@ using UnityEngine;
 public class Table : MonoBehaviour, IInteractable
 {
     [SerializeField] private GameObject[] disabledGameObjects;
-    [SerializeField] private Vector3 shift = new(0.5f,0.5f,0);
+    [SerializeField] private Vector3 shift = new(0.25f,0.5f,0);
     [SerializeField] private float shiftSteps = 30;
     [SerializeField] private bool singleUse = true;
 

@@ -249,17 +249,37 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5173950407675352112, guid: d347a5d853add194db6283bff0a94296, type: 3}
+      propertyPath: shift.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: -5173950407675352112, guid: d347a5d853add194db6283bff0a94296, type: 3}
+      propertyPath: singleUse
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5173950407675352112, guid: d347a5d853add194db6283bff0a94296, type: 3}
+      propertyPath: shiftSteps
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -5173950407675352112, guid: d347a5d853add194db6283bff0a94296, type: 3}
+      propertyPath: disabledGameObjects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5173950407675352112, guid: d347a5d853add194db6283bff0a94296, type: 3}
+      propertyPath: 'disabledGameObjects.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1196494569}
     - target: {fileID: 1528615681070614365, guid: d347a5d853add194db6283bff0a94296, type: 3}
       propertyPath: m_Name
-      value: Chair
+      value: Table
       objectReference: {fileID: 0}
     - target: {fileID: 7361900491303272170, guid: d347a5d853add194db6283bff0a94296, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.18
+      value: -6.2
       objectReference: {fileID: 0}
     - target: {fileID: 7361900491303272170, guid: d347a5d853add194db6283bff0a94296, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.09
+      value: -2.1
       objectReference: {fileID: 0}
     - target: {fileID: 7361900491303272170, guid: d347a5d853add194db6283bff0a94296, type: 3}
       propertyPath: m_LocalPosition.z
@@ -588,6 +608,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2710903548528959071, guid: fd8132af4b0703e40a1a9aadc3789c29, type: 3}
+      propertyPath: hiddenGameObjects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2710903548528959071, guid: fd8132af4b0703e40a1a9aadc3789c29, type: 3}
+      propertyPath: 'hiddenGameObjects.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1452174366}
     - target: {fileID: 4410806047636947401, guid: fd8132af4b0703e40a1a9aadc3789c29, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.28
@@ -637,6 +665,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd8132af4b0703e40a1a9aadc3789c29, type: 3}
+--- !u!1 &1196494569 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8856837896171700231, guid: fd8132af4b0703e40a1a9aadc3789c29, type: 3}
+  m_PrefabInstance: {fileID: 886896380}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1452174366 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8307851042914724207, guid: b516009500158494aa0d4e7dd1a26a86, type: 3}
+  m_PrefabInstance: {fileID: 2660504952081937777}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1701240594
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1069,11 +1107,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8298610618867296412, guid: b516009500158494aa0d4e7dd1a26a86, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.266
+      value: -6.34
       objectReference: {fileID: 0}
     - target: {fileID: 8298610618867296412, guid: b516009500158494aa0d4e7dd1a26a86, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.827
+      value: -2.1
       objectReference: {fileID: 0}
     - target: {fileID: 8298610618867296412, guid: b516009500158494aa0d4e7dd1a26a86, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1113,11 +1151,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9122951539767298210, guid: b516009500158494aa0d4e7dd1a26a86, type: 3}
       propertyPath: m_SortingLayer
-      value: 0
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 9122951539767298210, guid: b516009500158494aa0d4e7dd1a26a86, type: 3}
       propertyPath: m_SortingLayerID
-      value: 0
+      value: 1486115909
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

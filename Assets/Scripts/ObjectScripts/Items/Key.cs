@@ -1,6 +1,10 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 
-public class Key : MonoBehaviour, IInteractable, IItem
+[RequireComponent(typeof(Collider2D))]
+[RequireComponent(typeof(SortingGroup))]
+
+public class Key : MonoBehaviour, IInteractable, IItem, IHidden
 {
     public void Interact()
     {
@@ -10,6 +14,18 @@ public class Key : MonoBehaviour, IInteractable, IItem
     public void PutDown()
     {
         GetComponent<Collider2D>().enabled = true;
+    }
+
+    public void Hide()
+    {
+        GetComponent<Collider2D>().enabled = false;
+        GetComponent<SortingGroup>().sortingLayerName = "Hidden";
+    }
+
+    public void Show()
+    {
+        GetComponent<Collider2D>().enabled = true;
+        GetComponent<SortingGroup>().sortingLayerName = "Default";
     }
 
     void Awake(){}

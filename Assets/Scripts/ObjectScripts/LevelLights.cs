@@ -11,6 +11,11 @@ public class LevelLights : MonoBehaviour
     [SerializeField] private Door leftDoor;
     [SerializeField] private Door rightDoor;
 
+    public void Start()
+    {
+        Pass();
+    }
+
     public void Pass()
     {
         leftLight.color = leftDoor.GetUnlockStatus() ? Color.green : Color.red;

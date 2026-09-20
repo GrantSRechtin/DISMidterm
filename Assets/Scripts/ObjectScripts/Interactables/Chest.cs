@@ -2,18 +2,13 @@ using UnityEngine;
 
 public class Chest : MonoBehaviour, IInteractable
 {
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
-
     public void Interact()
     {
         
     }
+
+    void Awake(){}
+    void Start(){}
+    void Update(){}
+    void FixedUpdate(){}
 }

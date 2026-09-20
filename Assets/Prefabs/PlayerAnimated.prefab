@@ -140,6 +140,7 @@ GameObject:
   - component: {fileID: 5755049658297812751}
   - component: {fileID: 6682010828377554967}
   - component: {fileID: 3313222194128629703}
+  - component: {fileID: -8262822961438685158}
   m_Layer: 0
   m_Name: PlayerAnimated
   m_TagString: Untagged
@@ -247,6 +248,22 @@ SortingGroup:
   m_SortingOrder: 0
   m_SortAtRoot: 0
   m_Sort3DAs2D: 0
+--- !u!114 &-8262822961438685158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981333575143976891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2af488d097824980829f2f1b50226c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInteractions
+  interactionRadius: 0.5
+  interactableLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1 &999451825167857836
 GameObject:
   m_ObjectHideFlags: 0

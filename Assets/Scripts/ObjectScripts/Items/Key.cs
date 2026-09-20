@@ -1,24 +1,19 @@
 using UnityEngine;
 
-public class Key : MonoBehaviour, IItem
+public class Key : MonoBehaviour, IInteractable, IItem
 {
-    void Start()
+    public void Interact()
     {
-        
-    }
-
-    void Update()
-    {
-        
-    }
-
-    public void PickUp()
-    {
-        
+        GetComponent<Collider2D>().enabled = false;
     }
 
     public void PutDown()
     {
-        
+        GetComponent<Collider2D>().enabled = true;
     }
+
+    void Awake(){}
+    void Start(){}
+    void Update(){}
+    void FixedUpdate(){}
 }

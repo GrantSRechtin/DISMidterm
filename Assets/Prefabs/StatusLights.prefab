@@ -101,6 +101,7 @@ GameObject:
   m_Component:
   - component: {fileID: 393334827206858155}
   - component: {fileID: 5496593244080223104}
+  - component: {fileID: 6544210582521685917}
   m_Layer: 0
   m_Name: StatusLights
   m_TagString: Untagged
@@ -184,6 +185,22 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &6544210582521685917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4400459326471225823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9455fb414e923a40b3e27fb15633461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelLights
+  leftLight: {fileID: 7213070178459449797}
+  rightLight: {fileID: 3305406783174733639}
+  leftDoor: {fileID: 0}
+  rightDoor: {fileID: 0}
 --- !u!1 &4814914323653910509
 GameObject:
   m_ObjectHideFlags: 0

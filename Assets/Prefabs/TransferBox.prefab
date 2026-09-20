@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8763407944794540250}
   - component: {fileID: 3733853187467696813}
   - component: {fileID: 1494624702805046683}
+  - component: {fileID: 4446569056412170470}
   m_Layer: 0
   m_Name: TransferBox
   m_TagString: Untagged
@@ -143,3 +144,15 @@ PolygonCollider2D:
       - {x: -0.5775103, y: -0.598882}
       - {x: -1.2622666, y: -0.7384684}
   m_UseDelaunayMesh: 1
+--- !u!114 &4446569056412170470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6809946326218054556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e56e5bf2d29039747afe807cacfb6826, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PassBox

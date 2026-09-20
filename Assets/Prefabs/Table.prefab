@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7361900491303272170}
   - component: {fileID: -4443786207744809920}
   - component: {fileID: 8292807983424237869}
+  - component: {fileID: -5173950407675352112}
   m_Layer: 0
   m_Name: Table
   m_TagString: Untagged
@@ -144,6 +145,18 @@ PolygonCollider2D:
       - {x: -3.3828826, y: -0.29761577}
       - {x: -1.4632102, y: 3.2474954}
   m_UseDelaunayMesh: 1
+--- !u!114 &-5173950407675352112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528615681070614365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c502877446ab2374cace543a9f014645, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Desk
 --- !u!1 &7697115544446354711
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,16 +5,6 @@ public class Door : MonoBehaviour, IInteractable
 {
     [SerializeField] private bool isUnlocked=false;
 
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
-
     public void Interact()
     {
         
@@ -24,4 +14,9 @@ public class Door : MonoBehaviour, IInteractable
     {
         return isUnlocked;
     }
+
+    void Awake(){}
+    void Start(){}
+    void Update(){}
+    void FixedUpdate(){}
 }

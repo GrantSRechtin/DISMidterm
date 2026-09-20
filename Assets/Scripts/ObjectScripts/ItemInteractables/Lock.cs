@@ -2,18 +2,13 @@ using UnityEngine;
 
 public class Lock : MonoBehaviour, IItemInteractable
 {
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
-
     public void Interact(GameObject item)
     {
         
     }
+
+    void Awake(){}
+    void Start(){}
+    void Update(){}
+    void FixedUpdate(){}
 }

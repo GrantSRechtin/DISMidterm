@@ -6,6 +6,9 @@ using UnityEngine.Rendering;
 
 public class Key : MonoBehaviour, IInteractable, IItem, IHidden
 {
+
+    [Header("Key color string (must match lock string)")]
+    [SerializeField] private string color;
     public void Interact()
     {
         GetComponent<Collider2D>().enabled = false;
@@ -26,6 +29,11 @@ public class Key : MonoBehaviour, IInteractable, IItem, IHidden
     {
         GetComponent<Collider2D>().enabled = true;
         GetComponent<SortingGroup>().sortingLayerName = "Default";
+    }
+
+    public string GetColor()
+    {
+        return color;
     }
 
     void Awake(){}

@@ -632,7 +632,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: StatusLightsRIght
       objectReference: {fileID: 0}
-<<<<<<< HEAD
     - target: {fileID: 4814914323653910509, guid: 9e5d378d864166e42a00f672245a3fc8, type: 3}
       propertyPath: m_Name
       value: RIghtRightLight
@@ -649,9 +648,6 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6544210582521685917, guid: 9e5d378d864166e42a00f672245a3fc8, type: 3}
-=======
     - target: {fileID: 6544210582521685917, guid: 9e5d378d864166e42a00f672245a3fc8, type: 3}
       propertyPath: leftDoor
       value: 
@@ -661,7 +657,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1399469661}
     m_RemovedComponents: []
->>>>>>> 8b06514d6feb0f584f0dade2d104ac18f62655f4
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1611,7 +1606,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: StatusLightsLeft
       objectReference: {fileID: 0}
-<<<<<<< HEAD
     - target: {fileID: 4814914323653910509, guid: 9e5d378d864166e42a00f672245a3fc8, type: 3}
       propertyPath: m_Name
       value: LeftLeftLight
@@ -1628,9 +1622,6 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6544210582521685917, guid: 9e5d378d864166e42a00f672245a3fc8, type: 3}
-=======
     - target: {fileID: 6544210582521685917, guid: 9e5d378d864166e42a00f672245a3fc8, type: 3}
       propertyPath: leftDoor
       value: 
@@ -1640,7 +1631,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1399469661}
     m_RemovedComponents: []
->>>>>>> 8b06514d6feb0f584f0dade2d104ac18f62655f4
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

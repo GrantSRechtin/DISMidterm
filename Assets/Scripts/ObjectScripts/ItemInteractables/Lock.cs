@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Lock : MonoBehaviour, IItemInteractable
@@ -23,6 +24,14 @@ public class Lock : MonoBehaviour, IItemInteractable
             {
                 unlocked = true;
                 Debug.Log("lock unlocked");
+                Destroy(item);
+                //make lock invisible
+                SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+                if (spriteRenderer != null)
+                {
+                    spriteRenderer.enabled = false;
+                }
+
                 if (isDoorLock)
                 {
                     playerLght.GetComponent<SpriteRenderer>().color = Color.green;

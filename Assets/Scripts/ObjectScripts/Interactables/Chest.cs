@@ -29,6 +29,7 @@ public class Chest : MonoBehaviour, IInteractable
             if (spriteRenderer != null && openChestSprite != null)
             {
                 spriteRenderer.sprite = openChestSprite;
+                gameObject.transform.position = new Vector3(gameObject.transform.position.x + 0.4f, gameObject.transform.position.y, gameObject.transform.position.z);
                 Debug.Log("chest open");
             }
            

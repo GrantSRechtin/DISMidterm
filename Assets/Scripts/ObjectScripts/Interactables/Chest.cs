@@ -7,17 +7,29 @@ public class Chest : MonoBehaviour, IInteractable
     [Header("Chest's lock GameObject")]
     [SerializeField] private GameObject chestLock;
 
-
+    [Header("Open chest sprite")]
+    [SerializeField] private Sprite openChestSprite;
 
     public void Interact()
     {
+        if (chestLock == null)
+        {
+            return;
+        }
+
         Lock chestlock = chestLock.GetComponent<Lock>();
-        if (chestlock.GetStatus())
+        if (chestlock != null && chestlock.GetStatus())
         {
             isUnlocked = true;
-            //change to open chest sprite and handle logic of getting item inside here 
+
+            SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+            if (spriteRenderer != null && openChestSprite != null)
+            {
+                spriteRenderer.sprite = openChestSprite;
+            }
+
+            // handle logic of getting item inside here
         }
-        return; 
     }
 
     public bool GetUnlockStatus()
@@ -25,8 +37,8 @@ public class Chest : MonoBehaviour, IInteractable
         return isUnlocked;
     }
 
-    void Awake(){}
-    void Start(){}
-    void Update(){}
-    void FixedUpdate(){}
+    void Awake() { }
+    void Start() { }
+    void Update() { }
+    void FixedUpdate() { }
 }

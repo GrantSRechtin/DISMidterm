@@ -12,6 +12,9 @@ public class PlayerInteractions : MonoBehaviour
     [SerializeField] private float interactionRadius = 0.5f;
     [SerializeField] private LayerMask interactableLayer;
 
+    [SerializeField] private LevelLights leftLights;
+    [SerializeField] private LevelLights rightLights;
+
     private GameObject itemInHand = null;
   
     private void OnInteract(InputValue value)
@@ -39,6 +42,9 @@ public class PlayerInteractions : MonoBehaviour
             PickUpItem(closestGameObject);
         }
         closestComponent?.Interact();
+
+        // Check for update in doors and lights after every interact
+        UpdateDoorStatus();
     }
 
     private void ItemHeldInteract(Collider2D[] hitColliders)
@@ -54,6 +60,9 @@ public class PlayerInteractions : MonoBehaviour
             itemInHand.GetComponent<IItem>().PutDown();
             PutDownItem(itemInHand);
         }
+
+        // Check for update in doors and lights after every interact
+        UpdateDoorStatus();
     }
 
     private (T closestComponent, GameObject closestGameObject) GetClosest<T>(Collider2D[] hitColliders) where T : class
@@ -97,5 +106,11 @@ public class PlayerInteractions : MonoBehaviour
         item.transform.SetParent(transform.parent);
 
         item.GetComponent<SortingGroup>().sortingOrder = 0;
+    }
+
+    private void UpdateDoorStatus()
+    {
+        leftLights.StatusUpdate();
+        rightLights.StatusUpdate();
     }
 }

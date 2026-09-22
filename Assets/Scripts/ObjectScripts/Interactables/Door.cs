@@ -3,19 +3,15 @@ using UnityEngine;
 
 public class Door : MonoBehaviour, IInteractable
 {
-    [SerializeField] private bool isUnlocked = false;
-
     [Header("Door's lock GameObject")]
-    [SerializeField] private GameObject doorLock;
+    [SerializeField] private Lock doorLock;
 
-
+    private bool isUnlocked = false;
 
     public void Interact()
     {
-        Lock doorlock = doorLock.GetComponent<Lock>();
-        if (doorlock.GetStatus())
+        if (GetUnlockStatus())
         {
-            isUnlocked = true;
             //change to open doors sprite and handle logic of walking through here 
         }
         return; 
@@ -23,6 +19,7 @@ public class Door : MonoBehaviour, IInteractable
 
     public bool GetUnlockStatus()
     {
+        isUnlocked = doorLock ? doorLock.GetStatus() : true;
         return isUnlocked;
     }
 

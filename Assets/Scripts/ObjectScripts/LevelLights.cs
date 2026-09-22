@@ -13,10 +13,10 @@ public class LevelLights : MonoBehaviour
 
     public void Start()
     {
-        Pass();
+        StatusUpdate();
     }
 
-    public void Pass()
+    public void StatusUpdate()
     {
         leftLight.color = leftDoor.GetUnlockStatus() ? Color.green : Color.red;
         rightLight.color = rightDoor.GetUnlockStatus() ? Color.green : Color.red;

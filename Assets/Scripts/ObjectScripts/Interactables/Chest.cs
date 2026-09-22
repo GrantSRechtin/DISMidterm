@@ -4,11 +4,22 @@ public class Chest : MonoBehaviour, IInteractable
 {
     [SerializeField] private bool isUnlocked = false;
 
+    [Header("Chest's stored GameObjects")]
+    [SerializeField] private GameObject[] hiddenGameObjects;
+
     [Header("Chest's lock GameObject")]
     [SerializeField] private GameObject chestLock;
 
     [Header("Open chest sprite")]
     [SerializeField] private Sprite openChestSprite;
+
+    void Start()
+    {
+        foreach (GameObject hiddenObject in hiddenGameObjects)
+        {
+            hiddenObject.GetComponent<IHidden>().Hide();
+        }
+    }
 
     public void Interact()
     {
@@ -33,8 +44,10 @@ public class Chest : MonoBehaviour, IInteractable
                 Debug.Log("chest open");
             }
            
-
-            // handle logic of getting item inside here
+            foreach (GameObject hiddenObject in hiddenGameObjects)
+            {
+                hiddenObject.GetComponent<IHidden>().Show();
+            }
         }
     }
 
@@ -44,7 +57,6 @@ public class Chest : MonoBehaviour, IInteractable
     }
 
     void Awake() { }
-    void Start() { }
     void Update() { }
     void FixedUpdate() { }
 }

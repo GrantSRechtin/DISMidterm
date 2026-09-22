@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class Lock : MonoBehaviour, IItemInteractable
 {
-     [Header("Lock color string (must match key string)")]
+    [Header("Lock color string (must match key string)")]
     [SerializeField] private string color;
+
     private bool unlocked = false; 
+    private SpriteRenderer[] spriteRenderers;
+    private Collider2D[] colliders;
 
-    [Header("Is this a final door lock?")]
-    [SerializeField] private bool isDoorLock;
-
-    [Header("Player and Co-Payer Light GameObject")]
-    [SerializeField] private GameObject playerLght;
-    [SerializeField] private GameObject coPLayerLight;
+    private void Awake()
+    {
+        spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
+        colliders = GetComponentsInChildren<Collider2D>();
+    }
 
     public void Interact(GameObject item)
     {
@@ -25,18 +27,9 @@ public class Lock : MonoBehaviour, IItemInteractable
                 unlocked = true;
                 Debug.Log("lock unlocked");
                 Destroy(item);
-                //make lock invisible
-                SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-                if (spriteRenderer != null)
-                {
-                    spriteRenderer.enabled = false;
-                }
 
-                if (isDoorLock)
-                {
-                    playerLght.GetComponent<SpriteRenderer>().color = Color.green;
-                    coPLayerLight.GetComponent<SpriteRenderer>().color=Color.green;
-                }
+                // Disable Lock
+                Disable();
             }
         }
     }
@@ -46,7 +39,18 @@ public class Lock : MonoBehaviour, IItemInteractable
         return unlocked;
     }
 
-    void Awake() { }
+    private void Disable()
+    {
+        foreach (Collider2D collider in colliders)
+        {
+            collider.enabled = false;
+        }
+        foreach (SpriteRenderer sr in spriteRenderers)
+        {
+            sr.enabled = false;
+        }
+    }
+
     void Start() { }
     void Update() { }
     void FixedUpdate() { }

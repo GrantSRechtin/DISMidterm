@@ -22,6 +22,7 @@ public class Lock : MonoBehaviour, IItemInteractable
             if (key.GetColor() == color)
             {
                 unlocked = true;
+                Debug.Log("lock unlocked");
                 if (isDoorLock)
                 {
                     playerLght.GetComponent<SpriteRenderer>().color = Color.green;

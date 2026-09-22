@@ -636,6 +636,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: RIghtRightLight
       objectReference: {fileID: 0}
+    - target: {fileID: 6544210582521685917, guid: 9e5d378d864166e42a00f672245a3fc8, type: 3}
+      propertyPath: leftDoor
+      value: 
+      objectReference: {fileID: 1610817591}
+    - target: {fileID: 6544210582521685917, guid: 9e5d378d864166e42a00f672245a3fc8, type: 3}
+      propertyPath: rightDoor
+      value: 
+      objectReference: {fileID: 1399469661}
     - target: {fileID: 7213070178459449797, guid: 9e5d378d864166e42a00f672245a3fc8, type: 3}
       propertyPath: m_Color.b
       value: 0
@@ -648,14 +656,6 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6544210582521685917, guid: 9e5d378d864166e42a00f672245a3fc8, type: 3}
-      propertyPath: leftDoor
-      value: 
-      objectReference: {fileID: 1610817591}
-    - target: {fileID: 6544210582521685917, guid: 9e5d378d864166e42a00f672245a3fc8, type: 3}
-      propertyPath: rightDoor
-      value: 
-      objectReference: {fileID: 1399469661}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1215,15 +1215,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1730299705955442964, guid: b516009500158494aa0d4e7dd1a26a86, type: 3}
       propertyPath: m_Color.b
-      value: 0.21960784
+      value: 0.9433962
       objectReference: {fileID: 0}
     - target: {fileID: 1730299705955442964, guid: b516009500158494aa0d4e7dd1a26a86, type: 3}
       propertyPath: m_Color.g
-      value: 0.21960784
+      value: 0.075553104
       objectReference: {fileID: 0}
     - target: {fileID: 1730299705955442964, guid: b516009500158494aa0d4e7dd1a26a86, type: 3}
       propertyPath: m_Color.r
-      value: 0.21960784
+      value: 0.031149892
       objectReference: {fileID: 0}
     - target: {fileID: 8298610618867296412, guid: b516009500158494aa0d4e7dd1a26a86, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1533,6 +1533,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChestLock
       objectReference: {fileID: 0}
+    - target: {fileID: 7915987244963031177, guid: 16d65d679c29caa4e85d0b1819d4d51c, type: 3}
+      propertyPath: color
+      value: blue
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1610,6 +1614,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: LeftLeftLight
       objectReference: {fileID: 0}
+    - target: {fileID: 6544210582521685917, guid: 9e5d378d864166e42a00f672245a3fc8, type: 3}
+      propertyPath: leftDoor
+      value: 
+      objectReference: {fileID: 1610817591}
+    - target: {fileID: 6544210582521685917, guid: 9e5d378d864166e42a00f672245a3fc8, type: 3}
+      propertyPath: rightDoor
+      value: 
+      objectReference: {fileID: 1399469661}
     - target: {fileID: 7213070178459449797, guid: 9e5d378d864166e42a00f672245a3fc8, type: 3}
       propertyPath: m_Color.b
       value: 0
@@ -1622,14 +1634,6 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6544210582521685917, guid: 9e5d378d864166e42a00f672245a3fc8, type: 3}
-      propertyPath: leftDoor
-      value: 
-      objectReference: {fileID: 1610817591}
-    - target: {fileID: 6544210582521685917, guid: 9e5d378d864166e42a00f672245a3fc8, type: 3}
-      propertyPath: rightDoor
-      value: 
-      objectReference: {fileID: 1399469661}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

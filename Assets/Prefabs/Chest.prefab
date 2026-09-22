@@ -58,6 +58,7 @@ GameObject:
   - component: {fileID: 2642528583728904220}
   - component: {fileID: 3296893339875955583}
   - component: {fileID: 3019200254748393169}
+  - component: {fileID: 7049961639875225212}
   m_Layer: 0
   m_Name: ChestLid
   m_TagString: Untagged
@@ -74,8 +75,8 @@ Transform:
   m_GameObject: {fileID: 4872158006431336904}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1, y: 3.1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.1, y: 3, z: 0}
+  m_LocalScale: {x: 0.975, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2583827533097975397}
@@ -129,7 +130,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 36
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -4601018945796076209, guid: 03ae2aedb8a12bc408f9e2e8272c1e9b, type: 3}
+  m_Sprite: {fileID: 8841673786395775439, guid: 43b4600996d7089488e0cbfc9f0bec9e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -177,7 +178,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 6.32, y: 7.42}
+    oldSize: {x: 6.19, y: 7.24}
     newSize: {x: 6.32, y: 7.42}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -185,11 +186,23 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -4.3998394, y: 4.4869013}
-      - {x: -2.9053419, y: -4.50566}
-      - {x: 4.4952497, y: -4.30124}
+    - - {x: -4.2727985, y: 4.64173}
+      - {x: -2.5242252, y: -3.847639}
+      - {x: 4.749327, y: -3.8754597}
       - {x: 2.0884948, y: 4.7088385}
   m_UseDelaunayMesh: 1
+--- !u!114 &7049961639875225212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4872158006431336904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7480c6f0e672238429153749dbb2601c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Chest
 --- !u!1 &5073690997737987882
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,7 +285,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 35
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 263829713240140150, guid: ced1a957cee540546b15d4fbce1e79f9, type: 3}
+  m_Sprite: {fileID: 3150210319468532129, guid: 1ee990c941c90ef4a9d4009e85b44365, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -320,7 +333,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 6.42, y: 9.71}
+    oldSize: {x: 6.27, y: 9.36}
     newSize: {x: 6.42, y: 9.71}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -328,8 +341,8 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -3.2724805, y: 6.2883587}
-      - {x: -2.1359472, y: -0.018592834}
-      - {x: 3.3428342, y: 0.14570922}
-      - {x: 0.25177616, y: 6.4363604}
+    - - {x: -2.806447, y: 6.0682497}
+      - {x: -1.3037143, y: -0.018592834}
+      - {x: 3.2468078, y: -0.054347202}
+      - {x: 0.117506325, y: 6.07017}
   m_UseDelaunayMesh: 1

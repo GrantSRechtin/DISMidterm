@@ -103,6 +103,7 @@ GameObject:
   - component: {fileID: 8544465870380560881}
   - component: {fileID: 2464015666432666171}
   - component: {fileID: 9122951539767298210}
+  - component: {fileID: -4152351503154217735}
   m_Layer: 0
   m_Name: Key
   m_TagString: Untagged
@@ -220,7 +221,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 1}
-  m_Radius: 10
+  m_Radius: 20
 --- !u!210 &9122951539767298210
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -230,7 +231,19 @@ SortingGroup:
   m_GameObject: {fileID: 8307851042914724207}
   m_Enabled: 1
   m_SortingLayerID: 1486115909
-  m_SortingLayer: -1
+  m_SortingLayer: -3
   m_SortingOrder: 0
   m_SortAtRoot: 0
   m_Sort3DAs2D: 0
+--- !u!114 &-4152351503154217735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8307851042914724207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 209d70be300ab1249a7690408638aeed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Key

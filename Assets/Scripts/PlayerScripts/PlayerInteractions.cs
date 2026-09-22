@@ -3,7 +3,8 @@ using JetBrains.Annotations;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UIElements.Experimental;
+using UnityEngine.Rendering;
+using Random = UnityEngine.Random;
 
 public class PlayerInteractions : MonoBehaviour
 {
@@ -11,14 +12,13 @@ public class PlayerInteractions : MonoBehaviour
     [SerializeField] private float interactionRadius = 0.5f;
     [SerializeField] private LayerMask interactableLayer;
 
-    private GameObject itemInHand;
+    private GameObject itemInHand = null;
   
-    
     private void OnInteract(InputValue value)
     {
-    
-        Collider[] hitColliders = Physics.OverlapSphere(transform.position, interactionRadius, interactableLayer);
-        if (!itemInHand)
+        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, interactionRadius, interactableLayer);
+
+        if (itemInHand == null)
         {
             ItemlessInteract(hitColliders);
         }
@@ -28,63 +28,74 @@ public class PlayerInteractions : MonoBehaviour
         }
     }
 
-    private void ItemlessInteract(Array hitColliders)
+    private void ItemlessInteract(Collider2D[] hitColliders)
     {
-        IInteractable closestInteractable = null;
+        (IInteractable closestComponent, GameObject closestGameObject) = GetClosest<IInteractable>(hitColliders);
+
+        if (closestComponent == null) { return; }
+
+        if (closestGameObject.TryGetComponent<IItem>(out var item))
+        {
+            PickUpItem(closestGameObject);
+        }
+        closestComponent?.Interact();
+    }
+
+    private void ItemHeldInteract(Collider2D[] hitColliders)
+    {
+        (IItemInteractable closestComponent, GameObject closestGameObject) = GetClosest<IItemInteractable>(hitColliders);
+
+        if (closestComponent != null)
+        {
+            closestComponent?.Interact(itemInHand);
+        }
+        else
+        {
+            itemInHand.GetComponent<IItem>().PutDown();
+            PutDownItem(itemInHand);
+        }
+    }
+
+    private (T closestComponent, GameObject closestGameObject) GetClosest<T>(Collider2D[] hitColliders) where T : class
+    {
+        T closestComponent = null;
+        GameObject closestGameObject = null;
         float closestDistance = float.MaxValue;
 
-        foreach (Collider col in hitColliders)
+        foreach (Collider2D col in hitColliders)
         {
-            if (col.TryGetComponent<IInteractable>(out var interactable))
+            if (col.TryGetComponent(typeof(T), out var component))
             {
+                T casted = component as T;
+                if (casted == null) continue;
+
                 float distance = Vector3.Distance(transform.position, col.transform.position);
                 if (distance < closestDistance)
                 {
+                    closestComponent = casted;
+                    closestGameObject = col.gameObject;
                     closestDistance = distance;
-                    closestInteractable = interactable;
                 }
             }
         }
 
-        closestInteractable?.Interact();
+        return (closestComponent, closestGameObject);
     }
 
-    private void ItemHeldInteract(Array hitColliders)
+    private void PickUpItem(GameObject item)
     {
-        IItemInteractable closestInteractable = null;
-        float closestDistance = float.MaxValue;
+        itemInHand = item;
+        item.transform.SetParent(transform);
+        item.transform.localPosition = Vector3.up * 0.25f;
 
-        foreach (Collider col in hitColliders)
-        {
-            if (col.TryGetComponent<IItemInteractable>(out var interactable))
-            {
-                float distance = Vector3.Distance(transform.position, col.transform.position);
-                if (distance < closestDistance)
-                {
-                    closestDistance = distance;
-                    closestInteractable = interactable;
-                }
-            }
-        }
-
-        closestInteractable?.Interact(itemInHand);
+        item.GetComponent<SortingGroup>().sortingOrder = 2;
     }
 
-    
-
-
-   
-
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void PutDownItem(GameObject item)
     {
-        
-    }
+        itemInHand = null;
+        item.transform.SetParent(transform.parent);
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        item.GetComponent<SortingGroup>().sortingOrder = 0;
     }
 }

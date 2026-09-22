@@ -14,19 +14,24 @@ public class Chest : MonoBehaviour, IInteractable
     {
         if (chestLock == null)
         {
+            Debug.Log("chest lock not assigned");
             return;
+           
         }
 
         Lock chestlock = chestLock.GetComponent<Lock>();
-        if (chestlock != null && chestlock.GetStatus())
+        if (chestlock.GetStatus())
         {
             isUnlocked = true;
+            Debug.Log("chest unlocked");
 
             SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
             if (spriteRenderer != null && openChestSprite != null)
             {
                 spriteRenderer.sprite = openChestSprite;
+                Debug.Log("chest open");
             }
+           
 
             // handle logic of getting item inside here
         }

@@ -131,7 +131,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 2.57, y: 2.16}
+    oldSize: {x: 2.57, y: 2.11}
     newSize: {x: 2.57, y: 2.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -151,3 +151,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0239acee77ad0414a9a5a8edeb8d3101, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Carpet
+  hiddenGameObjects: []
+  flippedCarpet: {fileID: 4740886214691312125, guid: 896d3e02e23e2d34d9d7126f3c82e283, type: 3}

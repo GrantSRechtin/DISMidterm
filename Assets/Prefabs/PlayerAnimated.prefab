@@ -264,6 +264,8 @@ MonoBehaviour:
   interactableLayer:
     serializedVersion: 2
     m_Bits: 4294967295
+  leftLights: {fileID: 0}
+  rightLights: {fileID: 0}
 --- !u!1 &999451825167857836
 GameObject:
   m_ObjectHideFlags: 0

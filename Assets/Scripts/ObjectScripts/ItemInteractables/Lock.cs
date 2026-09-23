@@ -2,7 +2,7 @@ using JetBrains.Annotations;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Lock : MonoBehaviour, IItemInteractable
+public class Lock : MonoBehaviour, IItemInteractable, ILock
 {
     [Header("Lock color string (must match key string)")]
     [SerializeField] private string color;

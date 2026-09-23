@@ -6,7 +6,7 @@ public class Pot : MonoBehaviour, IItemInteractable
 {
     [SerializeField] private GameObject[] heldGameObjects;
     [SerializeField] private SpriteRenderer sr;
-    
+
     private Collider2D potCollider;
 
     private void Awake()
@@ -31,7 +31,11 @@ public class Pot : MonoBehaviour, IItemInteractable
             sr.enabled = false;
             foreach (GameObject disabledObject in heldGameObjects)
             {
-                disabledObject.GetComponent<Collider2D>().enabled = true;
+                Collider2D collider = disabledObject.GetComponent<Collider2D>();
+                if (collider)
+                {
+                    collider.enabled = true;
+                }
             }
 
             item.GetComponent<Hammer>().Swing();

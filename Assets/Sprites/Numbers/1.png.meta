@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: cc1c02ad9b3cb3940a10eed2eeafd3c1
+guid: 3cffa2d6c59697a4fb7ba06deaa78c3d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5512499990161716080
-    second: BrokenFrontPot_0
+      213: -855298285791758126
+    second: 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 300
+  spritePixelsToUnits: 150
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BrokenFrontPot_0
+      name: 1_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1
-        width: 143
-        height: 80
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 542
+        y: 736
+        width: 64
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 073fee9d885508c40800000000000000
-      internalID: 5512499990161716080
+      spriteID: 2d8b16a9dbe5124f0800000000000000
+      internalID: -855298285791758126
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 1b8e34cfab65469499d059758f2a4dfa
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BrokenFrontPot_0: 5512499990161716080
+      1_0: -855298285791758126
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

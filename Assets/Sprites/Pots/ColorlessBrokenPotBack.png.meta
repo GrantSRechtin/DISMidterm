@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 349fce8512d6404418226b30cf14cd21
+guid: 6684f0f83eb5507429eb53e35d6f5bac
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2737256283369981563
-    second: FullPot_0
+      213: 3464798201539168725
+    second: ColorlessBrokenPotBack_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FullPot_0
+      name: ColorlessBrokenPotBack_0
       rect:
         serializedVersion: 2
-        x: 490
+        x: 509
         y: 412
-        width: 177
-        height: 279
+        width: 145
+        height: 129
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 589b682b9ef430ad0800000000000000
-      internalID: -2737256283369981563
+      spriteID: 5d987256b9f651030800000000000000
+      internalID: 3464798201539168725
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 3766bd6d091245449bfff497f1562421
+    spriteID: cfeb9ac9d810eab4195ff9f7189b58c6
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      FullPot_0: -2737256283369981563
+      ColorlessBrokenPotBack_0: 3464798201539168725
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

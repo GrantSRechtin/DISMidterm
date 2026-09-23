@@ -5,10 +5,8 @@ using UnityEngine.SceneManagement;
 public class Door : MonoBehaviour, IInteractable, IDoor
 {
     [Header("Door's lock GameObject")]
-    [SerializeField] private Lock doorLock;
+    [SerializeField] private GameObject doorLock;
     [SerializeField] private Door otherDoor;
-
-    private bool isUnlocked = false;
 
     public void Interact()
     {
@@ -22,8 +20,11 @@ public class Door : MonoBehaviour, IInteractable, IDoor
 
     public bool GetUnlockStatus()
     {
-        isUnlocked = doorLock ? doorLock.GetStatus() : true;
-        return isUnlocked;
+        if (!doorLock)
+        {
+            return true;
+        }
+        return doorLock.GetComponent<ILock>().GetStatus();
     }
 
     void Awake(){}

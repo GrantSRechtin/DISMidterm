@@ -9,7 +9,6 @@ using Random = UnityEngine.Random;
 public class PlayerInteractions : MonoBehaviour
 {
     [Header("Interaction Settings")]
-    [SerializeField] private float interactionRadius = 0.5f;
     [SerializeField] private LayerMask interactableLayer;
 
     [SerializeField] private LevelLights leftLights;
@@ -19,7 +18,7 @@ public class PlayerInteractions : MonoBehaviour
   
     private void OnInteract(InputValue value)
     {
-        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, interactionRadius, interactableLayer);
+        Collider2D[] hitColliders = Physics2D.OverlapBoxAll(transform.position + new Vector3(0,.03f,0), new Vector2(.8f,1),0, interactableLayer);
 
         if (itemInHand == null)
         {

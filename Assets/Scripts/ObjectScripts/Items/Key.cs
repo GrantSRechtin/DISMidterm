@@ -1,3 +1,4 @@
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -12,6 +13,7 @@ public class Key : MonoBehaviour, IInteractable, IItem, IHidden
     public void Interact()
     {
         GetComponent<Collider2D>().enabled = false;
+        transform.rotation = quaternion.identity;
     }
 
     public void PutDown()

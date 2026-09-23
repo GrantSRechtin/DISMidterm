@@ -1,20 +1,23 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class Door : MonoBehaviour, IInteractable
+public class Door : MonoBehaviour, IInteractable, IDoor
 {
     [Header("Door's lock GameObject")]
     [SerializeField] private Lock doorLock;
+    [SerializeField] private Door otherDoor;
 
     private bool isUnlocked = false;
 
     public void Interact()
     {
-        if (GetUnlockStatus())
+        Debug.Log("interacted");
+        if (GetUnlockStatus() && otherDoor.GetUnlockStatus())
         {
-            //change to open doors sprite and handle logic of walking through here 
+            Debug.Log("next level");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
         }
-        return; 
     }
 
     public bool GetUnlockStatus()

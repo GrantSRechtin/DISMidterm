@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8f08a4ebc348c3b418b2830c7de15529
+guid: d346386c59b8c63468bb3516b9010e5c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5910968943154382940
-    second: ChestListOpen_0
+      213: 870096550584809526
+    second: EntranceZone_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 450
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ChestListOpen_0
+      name: EntranceZone_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 450
-        height: 931
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 38
+        y: 15
+        width: 633
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4a7bae8501508fda0800000000000000
-      internalID: -5910968943154382940
+      spriteID: 63876e9e334331c00800000000000000
+      internalID: 870096550584809526
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: b74197e4cf787774b8fafc3a3f5d837b
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ChestListOpen_0: -5910968943154382940
+      EntranceZone_0: 870096550584809526
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class LevelLights : MonoBehaviour
+public class EntranceFloorColor : MonoBehaviour
 {
     [Header("Light Objects")]
     [SerializeField] private SpriteRenderer leftLight;
@@ -21,7 +21,24 @@ public class LevelLights : MonoBehaviour
         IDoor left = leftDoor.GetComponent<IDoor>();
         IDoor right = rightDoor.GetComponent<IDoor>();
 
-        leftLight.color = left.GetUnlockStatus() ? Color.green : Color.red;
-        rightLight.color = right.GetUnlockStatus() ? Color.green : Color.red;
+        if (left.GetUnlockStatus() && right.GetUnlockStatus())
+        {
+            SetColor(Color.green);
+        }
+        else if (left.GetUnlockStatus() || right.GetUnlockStatus())
+        {
+            SetColor(Color.yellow);
+        }
+        else
+        {
+            SetColor(Color.red);
+        }
+
+    }
+
+    private void SetColor(Color color)
+    {
+        leftLight.color = color;
+        rightLight.color = color;
     }
 }

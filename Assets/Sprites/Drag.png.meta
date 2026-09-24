@@ -115,13 +115,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Drag_0
+      name: Drag_4
       rect:
         serializedVersion: 2
         x: 509
-        y: 516
-        width: 288
-        height: 71
+        y: 517
+        width: 287
+        height: 69
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,8 +130,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a046a57c55c07b850800000000000000
-      internalID: 6392591758632051722
+      spriteID: 28b74e7e0724aedf0800000000000000
+      internalID: -150234584869209214
       vertices: []
       indices: 
       edges: []
@@ -140,7 +140,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: b89e219e266683f439314ad183817a30
     internalID: 0
     vertices: []
     indices: 

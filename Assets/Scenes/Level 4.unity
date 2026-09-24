@@ -461,7 +461,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1
+  m_text: 4
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -716,7 +716,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1
+  m_text: 4
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1285,11 +1285,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1311622481448581910, guid: c49630c935dddab478f134d9567296d3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.11
+      value: 6.28
       objectReference: {fileID: 0}
     - target: {fileID: 1311622481448581910, guid: c49630c935dddab478f134d9567296d3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.67
+      value: -0.59
       objectReference: {fileID: 0}
     - target: {fileID: 1311622481448581910, guid: c49630c935dddab478f134d9567296d3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2113,6 +2113,10 @@ PrefabInstance:
       propertyPath: chestLock
       value: 
       objectReference: {fileID: 2113125038}
+    - target: {fileID: 7049961639875225212, guid: abc8fa035047d734ba4fecf9b0ab878b, type: 3}
+      propertyPath: chestOrientation
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7049961639875225212, guid: abc8fa035047d734ba4fecf9b0ab878b, type: 3}
       propertyPath: hiddenGameObjects.Array.size
       value: 1

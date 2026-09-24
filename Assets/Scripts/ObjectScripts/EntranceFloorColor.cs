@@ -7,6 +7,11 @@ public class EntranceFloorColor : MonoBehaviour
     [SerializeField] private SpriteRenderer leftLight;
     [SerializeField] private SpriteRenderer rightLight;
 
+    private void Start()
+    {
+        SetColor(Color.red);
+    }
+
     public void StatusUpdate(int playersReady)
     {
         if (playersReady == 2)

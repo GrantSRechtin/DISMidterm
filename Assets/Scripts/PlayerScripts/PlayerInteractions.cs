@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
 public class PlayerInteractions : MonoBehaviour
@@ -11,9 +12,13 @@ public class PlayerInteractions : MonoBehaviour
     [Header("Interaction Settings")]
     [SerializeField] private LayerMask interactableLayer;
 
-    [SerializeField] private LevelController levelController;
-
+    private LevelController levelController;
     private GameObject itemInHand = null;
+
+    private void Awake()
+    {
+        levelController = FindFirstObjectByType<LevelController>();
+    }
   
     private void OnInteract(InputValue value)
     {
@@ -39,10 +44,15 @@ public class PlayerInteractions : MonoBehaviour
         {
             PickUpItem(closestGameObject);
         }
+
+        LevelController controllerBeforeInteraction = levelController;
+        Scene sceneBeforeInteraction = gameObject.scene;
         closestComponent?.Interact();
 
-        // Check for update in doors and lights after every interact
-        levelController.UpdateLevelStatus();
+        if (this != null && gameObject.scene == sceneBeforeInteraction && controllerBeforeInteraction != null)
+        {
+            controllerBeforeInteraction.UpdateLevelStatus();
+        }
     }
 
     private void ItemHeldInteract(Collider2D[] hitColliders)
@@ -60,7 +70,7 @@ public class PlayerInteractions : MonoBehaviour
         }
 
         // Check for update in doors and lights after every interact
-        levelController.UpdateLevelStatus();
+        if (levelController){ levelController.UpdateLevelStatus(); }
     }
 
     private (T closestComponent, GameObject closestGameObject) GetClosest<T>(Collider2D[] hitColliders) where T : class

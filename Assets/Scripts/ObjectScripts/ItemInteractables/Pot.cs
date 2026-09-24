@@ -5,7 +5,7 @@ using UnityEngine;
 public class Pot : MonoBehaviour, IItemInteractable
 {
     [SerializeField] private GameObject[] heldGameObjects;
-    [SerializeField] private SpriteRenderer sr;
+    [SerializeField] private SpriteRenderer[] srs;
 
     private Collider2D potCollider;
 
@@ -28,7 +28,10 @@ public class Pot : MonoBehaviour, IItemInteractable
         if (item.CompareTag("Hammer"))
         {
             potCollider.enabled = false;
-            sr.enabled = false;
+            foreach (SpriteRenderer sr in srs)
+            {
+                sr.enabled = false;
+            }
             foreach (GameObject disabledObject in heldGameObjects)
             {
                 Collider2D collider = disabledObject.GetComponent<Collider2D>();

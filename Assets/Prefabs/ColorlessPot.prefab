@@ -359,7 +359,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pot
   heldGameObjects: []
-  sr: {fileID: 5761525945560648774}
+  srs:
+  - {fileID: 5761525945560648774}
 --- !u!58 &7550570066304474431
 CircleCollider2D:
   m_ObjectHideFlags: 0

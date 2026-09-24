@@ -6,6 +6,11 @@ public class Door : MonoBehaviour, IInteractable
 {
     private LevelController levelController;
 
+    private void Awake()
+    {
+        levelController = FindFirstObjectByType<LevelController>();
+    }
+
     public void Interact()
     {
         if (levelController.IsLevelComplete())

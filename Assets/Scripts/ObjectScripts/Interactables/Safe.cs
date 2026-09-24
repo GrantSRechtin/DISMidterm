@@ -25,6 +25,7 @@ public class Safe : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        Debug.Log("safe interacted with");
         if (safeLock == null)
         {
             Debug.Log("safe lock not assigned");

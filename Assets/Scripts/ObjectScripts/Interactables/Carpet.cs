@@ -27,5 +27,7 @@ public class Carpet : MonoBehaviour, IInteractable
             hiddenObject.GetComponent<IHidden>().Show();
         }
         sr.sprite = flippedCarpet;
+
+        GetComponent<Collider2D>().enabled = false;
     }
 }

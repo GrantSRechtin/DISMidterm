@@ -42,6 +42,8 @@ public class Safe : MonoBehaviour, IInteractable
                 hiddenObject.GetComponent<IHidden>().Show();
             }
             sr.sprite = openSafe;
+
+            GetComponent<Collider2D>().enabled = false;
         }
     }
 }

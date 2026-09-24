@@ -102,6 +102,7 @@ public class PlayerInteractions : MonoBehaviour
     {
         itemInHand = null;
         item.transform.SetParent(transform.parent);
+        item.transform.localPosition += Vector3.down * 0.75f;
 
         item.GetComponent<SortingGroup>().sortingOrder = 0;
     }

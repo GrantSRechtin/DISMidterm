@@ -2,33 +2,16 @@ using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Door : MonoBehaviour, IInteractable, IDoor
+public class Door : MonoBehaviour, IInteractable
 {
-    [Header("Door's lock GameObject")]
-    [SerializeField] private GameObject doorLock;
-    [SerializeField] private Door otherDoor;
+    [Header("Gameobject controlling level completion")]
+    [SerializeField] private LevelController levelController;
 
     public void Interact()
     {
-        Debug.Log("interacted");
-        if (GetUnlockStatus() && otherDoor.GetUnlockStatus())
+        if (levelController.IsLevelComplete())
         {
-            Debug.Log("next level");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
         }
     }
-
-    public bool GetUnlockStatus()
-    {
-        if (!doorLock)
-        {
-            return true;
-        }
-        return doorLock.GetComponent<ILock>().GetStatus();
-    }
-
-    void Awake(){}
-    void Start(){}
-    void Update(){}
-    void FixedUpdate(){}
 }

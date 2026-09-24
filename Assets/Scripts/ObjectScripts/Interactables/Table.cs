@@ -47,8 +47,4 @@ public class Table : MonoBehaviour, IInteractable
         shift *= -1;
         interactOutcome = !interactOutcome;
     }
-
-    void Awake(){}
-    void Update(){}
-    void FixedUpdate(){}
 }

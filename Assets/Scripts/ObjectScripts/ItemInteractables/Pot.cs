@@ -41,7 +41,4 @@ public class Pot : MonoBehaviour, IItemInteractable
             item.GetComponent<Hammer>().Swing();
         }
     }
-
-    void Update() { }
-    void FixedUpdate() { }
 }

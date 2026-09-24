@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7145485720959328099}
   - component: {fileID: 8015765084185152067}
   - component: {fileID: 4628275978706648088}
+  - component: {fileID: -1297034513231127888}
   - component: {fileID: 2542762071977489753}
   m_Layer: 0
   m_Name: DoorLockColored
@@ -159,6 +160,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Lock
   color: 
+--- !u!114 &-1297034513231127888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4143891540376956204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70af547df6c74bd4385f6861e56ee676, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DoorLock
 --- !u!210 &2542762071977489753
 SortingGroup:
   m_ObjectHideFlags: 0

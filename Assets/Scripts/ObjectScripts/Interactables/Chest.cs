@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class Chest : MonoBehaviour, IInteractable
 {
-    [SerializeField] private bool isUnlocked = false;
-
     [Header("Chest's stored GameObjects")]
     [SerializeField] private GameObject[] hiddenGameObjects;
 
@@ -31,9 +29,8 @@ public class Chest : MonoBehaviour, IInteractable
         }
 
         Lock chestlock = chestLock.GetComponent<Lock>();
-        if (chestlock.GetStatus())
+        if (chestlock.IsUnlocked())
         {
-            isUnlocked = true;
             Debug.Log("chest unlocked");
 
             SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
@@ -50,13 +47,4 @@ public class Chest : MonoBehaviour, IInteractable
             }
         }
     }
-
-    public bool GetUnlockStatus()
-    {
-        return isUnlocked;
-    }
-
-    void Awake() { }
-    void Update() { }
-    void FixedUpdate() { }
 }

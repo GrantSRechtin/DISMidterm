@@ -27,9 +27,4 @@ public class TransferBox : MonoBehaviour, IItemInteractable
     {
         return itemOffset;
     }
-
-    void Awake(){}
-    void Start(){}
-    void Update(){}
-    void FixedUpdate(){}
 }

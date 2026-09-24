@@ -376,6 +376,90 @@ RectTransform:
   m_AnchoredPosition: {x: 8.25, y: 4.35}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &439034492
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1965853127757934553, guid: fc2cad3ab8d5de14e823e740fdc893fe, type: 3}
+      propertyPath: leftLights
+      value: 
+      objectReference: {fileID: 159363527}
+    - target: {fileID: 1965853127757934553, guid: fc2cad3ab8d5de14e823e740fdc893fe, type: 3}
+      propertyPath: rightLights
+      value: 
+      objectReference: {fileID: 985684676}
+    - target: {fileID: 1965853127757934553, guid: fc2cad3ab8d5de14e823e740fdc893fe, type: 3}
+      propertyPath: leftCompletion
+      value: 
+      objectReference: {fileID: 1011340981}
+    - target: {fileID: 1965853127757934553, guid: fc2cad3ab8d5de14e823e740fdc893fe, type: 3}
+      propertyPath: rightCompletion
+      value: 
+      objectReference: {fileID: 1410456479}
+    - target: {fileID: 5287172646736179401, guid: fc2cad3ab8d5de14e823e740fdc893fe, type: 3}
+      propertyPath: m_Name
+      value: LevelController
+      objectReference: {fileID: 0}
+    - target: {fileID: 7246639663478006983, guid: fc2cad3ab8d5de14e823e740fdc893fe, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.52612
+      objectReference: {fileID: 0}
+    - target: {fileID: 7246639663478006983, guid: fc2cad3ab8d5de14e823e740fdc893fe, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.58989
+      objectReference: {fileID: 0}
+    - target: {fileID: 7246639663478006983, guid: fc2cad3ab8d5de14e823e740fdc893fe, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7246639663478006983, guid: fc2cad3ab8d5de14e823e740fdc893fe, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7246639663478006983, guid: fc2cad3ab8d5de14e823e740fdc893fe, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7246639663478006983, guid: fc2cad3ab8d5de14e823e740fdc893fe, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7246639663478006983, guid: fc2cad3ab8d5de14e823e740fdc893fe, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7246639663478006983, guid: fc2cad3ab8d5de14e823e740fdc893fe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7246639663478006983, guid: fc2cad3ab8d5de14e823e740fdc893fe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7246639663478006983, guid: fc2cad3ab8d5de14e823e740fdc893fe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fc2cad3ab8d5de14e823e740fdc893fe, type: 3}
+--- !u!114 &439034493 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1965853127757934553, guid: fc2cad3ab8d5de14e823e740fdc893fe, type: 3}
+  m_PrefabInstance: {fileID: 439034492}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e397615dab1d4a4b877a37cb1cf73ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelController
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -632,7 +716,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 981333575143976891, guid: fe00ea2d2c776f4468b87b479a7b133f, type: 3}
       propertyPath: m_Name
-      value: PlayerAnimatedRL
+      value: Player1R
       objectReference: {fileID: 0}
     - target: {fileID: 7562121523936777452, guid: fe00ea2d2c776f4468b87b479a7b133f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -679,6 +763,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe00ea2d2c776f4468b87b479a7b133f, type: 3}
+--- !u!60 &858556201 stripped
+PolygonCollider2D:
+  m_CorrespondingSourceObject: {fileID: 6073589475194209378, guid: fe00ea2d2c776f4468b87b479a7b133f, type: 3}
+  m_PrefabInstance: {fileID: 858556200}
+  m_PrefabAsset: {fileID: 0}
 --- !u!60 &980346133 stripped
 PolygonCollider2D:
   m_CorrespondingSourceObject: {fileID: 6073589475194209378, guid: fe00ea2d2c776f4468b87b479a7b133f, type: 3}
@@ -724,6 +813,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 980346133}
     - target: {fileID: 5971993425537849197, guid: c30a4a93e0147f24cabba643fcc8a7f1, type: 3}
+      propertyPath: player1
+      value: 
+      objectReference: {fileID: 858556201}
+    - target: {fileID: 5971993425537849197, guid: c30a4a93e0147f24cabba643fcc8a7f1, type: 3}
+      propertyPath: player2
+      value: 
+      objectReference: {fileID: 980346133}
+    - target: {fileID: 5971993425537849197, guid: c30a4a93e0147f24cabba643fcc8a7f1, type: 3}
       propertyPath: otherDoor
       value: 
       objectReference: {fileID: 1011340983}
@@ -735,6 +832,10 @@ PrefabInstance:
       propertyPath: rightLights
       value: 
       objectReference: {fileID: 985684676}
+    - target: {fileID: 5971993425537849197, guid: c30a4a93e0147f24cabba643fcc8a7f1, type: 3}
+      propertyPath: levelController
+      value: 
+      objectReference: {fileID: 439034493}
     - target: {fileID: 5971993425537849197, guid: c30a4a93e0147f24cabba643fcc8a7f1, type: 3}
       propertyPath: entranceFloorColor
       value: 
@@ -1113,7 +1214,7 @@ PrefabInstance:
       objectReference: {fileID: 985684676}
     - target: {fileID: 981333575143976891, guid: fe00ea2d2c776f4468b87b479a7b133f, type: 3}
       propertyPath: m_Name
-      value: PlayerAnimatedRR
+      value: Player2R
       objectReference: {fileID: 0}
     - target: {fileID: 5500327781526657942, guid: fe00ea2d2c776f4468b87b479a7b133f, type: 3}
       propertyPath: m_Color.b
@@ -1207,7 +1308,7 @@ PrefabInstance:
       objectReference: {fileID: 985684676}
     - target: {fileID: 981333575143976891, guid: fe00ea2d2c776f4468b87b479a7b133f, type: 3}
       propertyPath: m_Name
-      value: PlayerAnimatedLR
+      value: Player2L
       objectReference: {fileID: 0}
     - target: {fileID: 5500327781526657942, guid: fe00ea2d2c776f4468b87b479a7b133f, type: 3}
       propertyPath: m_Color.b
@@ -1270,6 +1371,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe00ea2d2c776f4468b87b479a7b133f, type: 3}
+--- !u!60 &2040617453 stripped
+PolygonCollider2D:
+  m_CorrespondingSourceObject: {fileID: 6073589475194209378, guid: fe00ea2d2c776f4468b87b479a7b133f, type: 3}
+  m_PrefabInstance: {fileID: 2040617452}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &154700807244481443
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1287,6 +1393,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1435988548}
     - target: {fileID: 5971993425537849197, guid: c30a4a93e0147f24cabba643fcc8a7f1, type: 3}
+      propertyPath: player1
+      value: 
+      objectReference: {fileID: 1435988548}
+    - target: {fileID: 5971993425537849197, guid: c30a4a93e0147f24cabba643fcc8a7f1, type: 3}
+      propertyPath: player2
+      value: 
+      objectReference: {fileID: 2040617453}
+    - target: {fileID: 5971993425537849197, guid: c30a4a93e0147f24cabba643fcc8a7f1, type: 3}
       propertyPath: otherDoor
       value: 
       objectReference: {fileID: 1410456480}
@@ -1298,6 +1412,10 @@ PrefabInstance:
       propertyPath: rightLights
       value: 
       objectReference: {fileID: 985684676}
+    - target: {fileID: 5971993425537849197, guid: c30a4a93e0147f24cabba643fcc8a7f1, type: 3}
+      propertyPath: levelController
+      value: 
+      objectReference: {fileID: 439034493}
     - target: {fileID: 5971993425537849197, guid: c30a4a93e0147f24cabba643fcc8a7f1, type: 3}
       propertyPath: entranceFloorColor
       value: 
@@ -1365,8 +1483,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EntranceFloorColor
   leftLight: {fileID: 1906371744}
   rightLight: {fileID: 652360365}
-  leftDoor: {fileID: 1011340981}
-  rightDoor: {fileID: 1410456479}
 --- !u!1001 &1794745079972167581
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1458,7 +1574,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 981333575143976891, guid: fe00ea2d2c776f4468b87b479a7b133f, type: 3}
       propertyPath: m_Name
-      value: PlayerAnimatedLL
+      value: Player1L
       objectReference: {fileID: 0}
     - target: {fileID: 7562121523936777452, guid: fe00ea2d2c776f4468b87b479a7b133f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1737,17 +1853,18 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 619394802}
+  - {fileID: 439034492}
   - {fileID: 6576414950965728236}
   - {fileID: 1794745079972167581}
   - {fileID: 72437228}
   - {fileID: 6498897315349150526}
   - {fileID: 1519126190}
-  - {fileID: 4573099019099698822}
   - {fileID: 2987610954771336833}
   - {fileID: 2040617452}
-  - {fileID: 1846675845}
   - {fileID: 858556200}
+  - {fileID: 1846675845}
   - {fileID: 154700807244481443}
   - {fileID: 1326953179}
+  - {fileID: 4573099019099698822}
   - {fileID: 1660008816}
   - {fileID: 198539533}

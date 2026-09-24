@@ -3,52 +3,45 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class StartDoor : MonoBehaviour, IInteractable, IDoor
+public class StartDoor : MonoBehaviour, IInteractable, ILevelCompletion
 {
-    [SerializeField] private Collider2D player;
-    [SerializeField] private StartDoor otherDoor;
+    [SerializeField] private Collider2D player1;
+    [SerializeField] private Collider2D player2;
     [SerializeField] private EntranceFloorColor entranceFloorColor;
-    [SerializeField] private LevelLights leftLights;
-    [SerializeField] private LevelLights rightLights;
+    [SerializeField] private LevelController levelController;
 
-    private bool isUnlocked = false;
+    private int playersReady = 0;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision == player)
+        if (collision == player1 || collision == player2)
         {
-            isUnlocked = true;
+            playersReady++;
         }
-        entranceFloorColor.StatusUpdate();
-        leftLights.StatusUpdate();
-        rightLights.StatusUpdate();
+        entranceFloorColor.StatusUpdate(playersReady);
+        levelController.UpdateLevelStatus();
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision == player)
+        if (collision == player1 || collision == player2)
         {
-            isUnlocked = false;
+            playersReady--;
         }
-        entranceFloorColor.StatusUpdate();
-        leftLights.StatusUpdate();
-        rightLights.StatusUpdate();
+        entranceFloorColor.StatusUpdate(playersReady);
+        levelController.UpdateLevelStatus();
     }
 
     public void Interact()
     {
-        if (isUnlocked && otherDoor.GetUnlockStatus())
+        if (levelController.IsLevelComplete())
         {
             SceneManager.LoadScene(1);
         }
     }
 
-    public bool GetUnlockStatus()
+    public bool GetStatus()
     {
-        return isUnlocked;
+        return playersReady == 2;
     }
-
-    void Start(){}
-    void Update(){}
-    void FixedUpdate(){}
 }

@@ -28,7 +28,4 @@ public class Carpet : MonoBehaviour, IInteractable
         }
         sr.sprite = flippedCarpet;
     }
-
-    void Update(){}
-    void FixedUpdate(){}
 }

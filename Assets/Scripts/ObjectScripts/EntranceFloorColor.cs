@@ -7,25 +7,13 @@ public class EntranceFloorColor : MonoBehaviour
     [SerializeField] private SpriteRenderer leftLight;
     [SerializeField] private SpriteRenderer rightLight;
 
-    [Header("Door Objects")]
-    [SerializeField] private GameObject leftDoor;
-    [SerializeField] private GameObject rightDoor;
-
-    public void Start()
+    public void StatusUpdate(int playersReady)
     {
-        StatusUpdate();
-    }
-
-    public void StatusUpdate()
-    {
-        IDoor left = leftDoor.GetComponent<IDoor>();
-        IDoor right = rightDoor.GetComponent<IDoor>();
-
-        if (left.GetUnlockStatus() && right.GetUnlockStatus())
+        if (playersReady == 2)
         {
             SetColor(Color.green);
         }
-        else if (left.GetUnlockStatus() || right.GetUnlockStatus())
+        else if (playersReady == 1)
         {
             SetColor(Color.yellow);
         }

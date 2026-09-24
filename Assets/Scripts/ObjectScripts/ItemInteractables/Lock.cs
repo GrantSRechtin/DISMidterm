@@ -2,7 +2,7 @@ using JetBrains.Annotations;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Lock : MonoBehaviour, IItemInteractable, ILock
+public class Lock : MonoBehaviour, IItemInteractable
 {
     [Header("Lock color string (must match key string)")]
     [SerializeField] private string color;
@@ -34,7 +34,7 @@ public class Lock : MonoBehaviour, IItemInteractable, ILock
         }
     }
 
-    public bool GetStatus()
+    public bool IsUnlocked()
     {
         return unlocked;
     }
@@ -50,8 +50,4 @@ public class Lock : MonoBehaviour, IItemInteractable, ILock
             sr.enabled = false;
         }
     }
-
-    void Start() { }
-    void Update() { }
-    void FixedUpdate() { }
 }

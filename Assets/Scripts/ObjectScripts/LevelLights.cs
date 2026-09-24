@@ -7,21 +7,9 @@ public class LevelLights : MonoBehaviour
     [SerializeField] private SpriteRenderer leftLight;
     [SerializeField] private SpriteRenderer rightLight;
 
-    [Header("Door Objects")]
-    [SerializeField] private GameObject leftDoor;
-    [SerializeField] private GameObject rightDoor;
-
-    public void Start()
+    public void UpdateLights(bool left, bool right)
     {
-        StatusUpdate();
-    }
-
-    public void StatusUpdate()
-    {
-        IDoor left = leftDoor.GetComponent<IDoor>();
-        IDoor right = rightDoor.GetComponent<IDoor>();
-
-        leftLight.color = left.GetUnlockStatus() ? Color.green : Color.red;
-        rightLight.color = right.GetUnlockStatus() ? Color.green : Color.red;
+        leftLight.color = left ? Color.green : Color.red;
+        rightLight.color = right ? Color.green : Color.red;
     }
 }

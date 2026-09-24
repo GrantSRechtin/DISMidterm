@@ -2,7 +2,7 @@ using JetBrains.Annotations;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class DoorController : MonoBehaviour, ILock
+public class NumberDisplayController : MonoBehaviour, ILevelCompletion
 {
     [SerializeField] NumberDisplay red;
     [SerializeField] NumberDisplay blue;

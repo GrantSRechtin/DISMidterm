@@ -17,7 +17,7 @@ public class PlayerInteractions : MonoBehaviour
   
     private void OnInteract(InputValue value)
     {
-        Collider2D[] hitColliders = Physics2D.OverlapBoxAll(transform.position + new Vector3(0,.03f,0), new Vector2(.8f,1),0, interactableLayer);
+        Collider2D[] hitColliders = Physics2D.OverlapBoxAll(transform.position + new Vector3(0,.35f,0), new Vector2(.65f,1), 0, interactableLayer);
 
         if (itemInHand == null)
         {

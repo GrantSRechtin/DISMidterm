@@ -80,7 +80,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -2129500837
-  m_SortingLayer: -2
+  m_SortingLayer: -3
   m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 4364530114254939910, guid: ab5482c1443d8e14b8cc51534ad383a0, type: 3}
@@ -139,10 +139,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.19228274, y: -1.3431972}
-      - {x: 0.36703405, y: -1.1995869}
-      - {x: -0.56235594, y: 0.46520692}
-      - {x: -1.132203, y: 0.3742988}
+    - - {x: 0.4809912, y: -0.4454982}
+      - {x: 0.5113084, y: 0.74008363}
+      - {x: -0.53831047, y: 1.7476335}
+      - {x: -0.56312585, y: 0.76704216}
   m_UseDelaunayMesh: 1
 --- !u!114 &4446569056412170470
 MonoBehaviour:

@@ -128,7 +128,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.25}
+  m_Offset: {x: 0.05, y: 0.6}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -138,7 +138,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.25, y: 0.5}
+  m_Size: {x: 1.7, y: 1.2}
   m_EdgeRadius: 0
 --- !u!114 &-446729792090853115
 MonoBehaviour:
@@ -152,8 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cd9d57857275d84482f3cd236c0520c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Door
-  doorLock: {fileID: 0}
-  otherDoor: {fileID: 0}
+  levelController: {fileID: 0}
 --- !u!1001 &7252826090822333348
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -165,6 +164,38 @@ PrefabInstance:
     - target: {fileID: 4143891540376956204, guid: 8efc71082ee7c0945b41caee65ec16a9, type: 3}
       propertyPath: m_Name
       value: DoorLockColored
+      objectReference: {fileID: 0}
+    - target: {fileID: 8015765084185152067, guid: 8efc71082ee7c0945b41caee65ec16a9, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
+      value: 1.4422153
+      objectReference: {fileID: 0}
+    - target: {fileID: 8015765084185152067, guid: 8efc71082ee7c0945b41caee65ec16a9, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].y
+      value: -0.20519292
+      objectReference: {fileID: 0}
+    - target: {fileID: 8015765084185152067, guid: 8efc71082ee7c0945b41caee65ec16a9, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].x
+      value: -0.2457862
+      objectReference: {fileID: 0}
+    - target: {fileID: 8015765084185152067, guid: 8efc71082ee7c0945b41caee65ec16a9, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].y
+      value: -0.20808518
+      objectReference: {fileID: 0}
+    - target: {fileID: 8015765084185152067, guid: 8efc71082ee7c0945b41caee65ec16a9, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].x
+      value: -0.2314179
+      objectReference: {fileID: 0}
+    - target: {fileID: 8015765084185152067, guid: 8efc71082ee7c0945b41caee65ec16a9, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].y
+      value: -1.4018853
+      objectReference: {fileID: 0}
+    - target: {fileID: 8015765084185152067, guid: 8efc71082ee7c0945b41caee65ec16a9, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].x
+      value: 1.4505608
+      objectReference: {fileID: 0}
+    - target: {fileID: 8015765084185152067, guid: 8efc71082ee7c0945b41caee65ec16a9, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].y
+      value: -1.3338457
       objectReference: {fileID: 0}
     - target: {fileID: 8801889330939892321, guid: 8efc71082ee7c0945b41caee65ec16a9, type: 3}
       propertyPath: m_LocalPosition.x

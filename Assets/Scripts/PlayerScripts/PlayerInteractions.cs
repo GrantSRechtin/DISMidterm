@@ -73,7 +73,7 @@ public class PlayerInteractions : MonoBehaviour
         if (levelController){ levelController.UpdateLevelStatus(); }
     }
 
-    private (T closestComponent, GameObject closestGameObject) GetClosest<T>(Collider2D[] hitColliders) where T : class
+    private (T, GameObject) GetClosest<T>(Collider2D[] hitColliders) where T : class
     {
         T closestComponent = null;
         GameObject closestGameObject = null;

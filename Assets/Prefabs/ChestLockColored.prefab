@@ -85,7 +85,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 541803772305879651, guid: 434f4c79cd58d904880b561db973e769, type: 3}
+  m_Sprite: {fileID: -724613890696851410, guid: 1466040dbc1bd0f4589ae8b4ca6599db, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -133,7 +133,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.25833333, y: 0.265}
+    oldSize: {x: 0.204, y: 0.216}
     newSize: {x: 0.17, y: 0.18}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -159,9 +159,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Lock
   color: 
-  isDoorLock: 0
-  playerLght: {fileID: 0}
-  coPLayerLight: {fileID: 0}
 --- !u!210 &434232591570561116
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -200,13 +197,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8584058356939014658}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0075, y: 0.013, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -0.052335896, w: 0.9986295}
+  m_LocalPosition: {x: 0.0041, y: 0.0076, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5834817835034482840}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -6}
 --- !u!212 &5519944628119703847
 SpriteRenderer:
   serializedVersion: 2

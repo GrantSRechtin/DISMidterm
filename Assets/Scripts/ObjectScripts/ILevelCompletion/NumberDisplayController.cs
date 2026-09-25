@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class NumberDisplayController : MonoBehaviour, ILevelCompletion
 {
-    [SerializeField] NumberDisplay red;
-    [SerializeField] NumberDisplay blue;
-    [SerializeField] NumberDisplay pink;
-    [SerializeField] NumberDisplay tan;
+    [SerializeField] NumberDisplay[] displays;
 
     public bool GetStatus()
     {
-        return red.IsCorrect() && blue.IsCorrect() && pink.IsCorrect() && tan.IsCorrect();
+        foreach (NumberDisplay display in displays)
+        {
+            if (!display.IsCorrect())
+            {
+                return false;
+            }
+        }
+        return true;
     }
 }

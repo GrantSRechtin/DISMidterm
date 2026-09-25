@@ -26,8 +26,8 @@ Transform:
   m_GameObject: {fileID: 5057661106880810773}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.775, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.03, y: 0.29, z: 0}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8298610618867296412}
@@ -221,7 +221,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 1}
-  m_Radius: 20
+  m_Radius: 25
 --- !u!210 &9122951539767298210
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -231,7 +231,7 @@ SortingGroup:
   m_GameObject: {fileID: 8307851042914724207}
   m_Enabled: 1
   m_SortingLayerID: 1486115909
-  m_SortingLayer: -3
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_SortAtRoot: 0
   m_Sort3DAs2D: 0
@@ -247,3 +247,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 209d70be300ab1249a7690408638aeed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Key
+  color: 

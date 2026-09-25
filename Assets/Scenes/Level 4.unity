@@ -632,6 +632,7 @@ GameObject:
   - component: {fileID: 316497492}
   - component: {fileID: 316497491}
   - component: {fileID: 316497490}
+  - component: {fileID: 316497493}
   m_Layer: 0
   m_Name: LevelNumber
   m_TagString: Untagged
@@ -802,6 +803,18 @@ RectTransform:
   m_AnchoredPosition: {x: 8.25, y: 4.35}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &316497493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 316497489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 769fc9aab102fd6478d906530db40d42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelNumber
 --- !u!114 &318131450 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6544210582521685917, guid: 9e5d378d864166e42a00f672245a3fc8, type: 3}
@@ -4054,6 +4067,7 @@ GameObject:
   - component: {fileID: 1684514879}
   - component: {fileID: 1684514878}
   - component: {fileID: 1684514877}
+  - component: {fileID: 1684514880}
   m_Layer: 0
   m_Name: LevelNumber
   m_TagString: Untagged
@@ -4224,6 +4238,18 @@ RectTransform:
   m_AnchoredPosition: {x: -8.25, y: 4.35}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1684514880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684514876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 769fc9aab102fd6478d906530db40d42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelNumber
 --- !u!4 &1712715759 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8801084864549152747, guid: d1efca757f282354683d27c757c21636, type: 3}

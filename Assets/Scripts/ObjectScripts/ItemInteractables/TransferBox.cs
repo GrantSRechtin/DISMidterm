@@ -46,13 +46,11 @@ public class TransferBox : MonoBehaviour, IItemInteractable
     {
         if (!room)
         {
-            Debug.Log("to right");
             return itemOffsetToRight;
             
         }
         else
         {
-            Debug.Log("to left");
             return itemOffsetToLeft;
             
         }

@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level 5
       objectReference: {fileID: 0}
+    - target: {fileID: 3720518913372001214, guid: 149f60a9ee6db254e9e59f3c17211cfb, type: 3}
+      propertyPath: 'secretLevels.Array.data[0]'
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5043337617804751211, guid: 149f60a9ee6db254e9e59f3c17211cfb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.35142

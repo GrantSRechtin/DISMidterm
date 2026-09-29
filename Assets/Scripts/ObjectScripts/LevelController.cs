@@ -11,6 +11,8 @@ public class LevelController : MonoBehaviour
     [SerializeField] private GameObject leftCompletion;
     [SerializeField] private GameObject rightCompletion;
 
+    [SerializeField] private AudioSource greenDing;
+
     private bool levelComplete = false;
 
     private void Start()
@@ -18,10 +20,23 @@ public class LevelController : MonoBehaviour
         UpdateLevelStatus();
     }
 
+    private bool left;
+    private bool right;
+
     public void UpdateLevelStatus()
     {
-        bool left = leftCompletion.GetComponent<ILevelCompletion>().GetStatus();
-        bool right = rightCompletion.GetComponent<ILevelCompletion>().GetStatus();
+        bool newLeft = leftCompletion.GetComponent<ILevelCompletion>().GetStatus();
+        if (newLeft != left && newLeft)
+        {
+            greenDing.Play();
+            left = newLeft;
+        }
+        bool newRight = rightCompletion.GetComponent<ILevelCompletion>().GetStatus();
+        if (newRight != right && newRight)
+        {
+            greenDing.Play();
+            right = newRight;
+        }
 
         levelComplete = left && right;
 

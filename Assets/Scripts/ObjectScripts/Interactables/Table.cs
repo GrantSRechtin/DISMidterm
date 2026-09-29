@@ -11,6 +11,7 @@ public class Table : MonoBehaviour, IInteractable
     [SerializeField] private Vector3 shift = new(0.25f,0.5f,0);
     [SerializeField] private float shiftSteps = 30;
     [SerializeField] private bool singleUse = true;
+    [SerializeField] private AudioSource moveObject;
 
     private bool interactOutcome = true;
 
@@ -30,6 +31,8 @@ public class Table : MonoBehaviour, IInteractable
 
     IEnumerator Shift()
     {
+
+        moveObject.Play();
         // Shift to new position
         for (int i = 0; i < shiftSteps; i++)
         {

@@ -5,14 +5,18 @@ public class Chest : MonoBehaviour, IInteractable
     [Header("Chest's stored GameObjects")]
     [SerializeField] private GameObject[] hiddenGameObjects;
 
+
     [Header("Chest's lock GameObject")]
     [SerializeField] private GameObject chestLock;
+
 
     [Header("Open chest sprite")]
     [SerializeField] private Sprite openChestSprite;
 
     [Header("Chest left=true, Chest right=false")]
     [SerializeField] private bool chestOrientation;
+
+    [SerializeField]private AudioSource chestOpen;
 
     private int interactNum=0;
 
@@ -40,7 +44,6 @@ public class Chest : MonoBehaviour, IInteractable
         Lock chestlock = chestLock.GetComponent<Lock>();
         if (chestlock.IsUnlocked())
         {
-            Debug.Log("chest unlocked");
 
             SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
             if (spriteRenderer != null && openChestSprite != null)
@@ -49,15 +52,14 @@ public class Chest : MonoBehaviour, IInteractable
                 if (chestOrientation)
                 {
                     gameObject.transform.position = new Vector3(gameObject.transform.position.x - 0.4f, gameObject.transform.position.y, gameObject.transform.position.z);
-                    Debug.Log("chest open");
                     
                 }
                 else
                 {
                     gameObject.transform.position = new Vector3(gameObject.transform.position.x + 0.4f, gameObject.transform.position.y, gameObject.transform.position.z);
-                    Debug.Log("chest open");
                 }
                 interactNum+=1;
+                chestOpen.Play();
                    
             }
            

@@ -6,6 +6,7 @@ public class Pot : MonoBehaviour, IItemInteractable
 {
     [SerializeField] private GameObject[] heldGameObjects;
     [SerializeField] private SpriteRenderer[] srs;
+    [SerializeField] private AudioSource potBreak;
 
     private Collider2D potCollider;
 
@@ -32,6 +33,7 @@ public class Pot : MonoBehaviour, IItemInteractable
             {
                 sr.enabled = false;
             }
+            potBreak.Play();
             foreach (GameObject disabledObject in heldGameObjects)
             {
                 Collider2D collider = disabledObject.GetComponent<Collider2D>();

@@ -4,6 +4,7 @@ public class Carpet : MonoBehaviour, IInteractable
 {
     [SerializeField] private GameObject[] hiddenGameObjects;
     [SerializeField] private Sprite flippedCarpet;
+    [SerializeField] private AudioSource carpetSound;
 
     private SpriteRenderer sr;
 
@@ -26,6 +27,7 @@ public class Carpet : MonoBehaviour, IInteractable
         {
             hiddenObject.GetComponent<IHidden>().Show();
         }
+        carpetSound.Play();
         sr.sprite = flippedCarpet;
 
         GetComponent<Collider2D>().enabled = false;

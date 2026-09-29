@@ -5,17 +5,16 @@ public class Chest : MonoBehaviour, IInteractable
     [Header("Chest's stored GameObjects")]
     [SerializeField] private GameObject[] hiddenGameObjects;
 
-
     [Header("Chest's lock GameObject")]
     [SerializeField] private GameObject chestLock;
-
 
     [Header("Open chest sprite")]
     [SerializeField] private Sprite openChestSprite;
 
-    [Header("Chest left=true, Chest right=false")]
+    [Header("Chest placement. Chest left=true, Chest right=false")]
     [SerializeField] private bool chestOrientation;
-
+    
+    [Header("Object audio")]
     [SerializeField]private AudioSource chestOpen;
 
     private int interactNum=0;

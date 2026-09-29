@@ -6,7 +6,8 @@ public class Lock : MonoBehaviour, IItemInteractable
 {
     [Header("Lock color string (must match key string)")]
     [SerializeField] private string color;
-
+    
+    [Header("Object audio")]
     [SerializeField] private AudioSource unlock;
 
     private bool unlocked = false; 

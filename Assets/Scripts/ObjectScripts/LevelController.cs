@@ -11,6 +11,7 @@ public class LevelController : MonoBehaviour
     [SerializeField] private GameObject leftCompletion;
     [SerializeField] private GameObject rightCompletion;
 
+    [Header("Object audio")]
     [SerializeField] private AudioSource greenDing;
 
     private bool levelComplete = false;

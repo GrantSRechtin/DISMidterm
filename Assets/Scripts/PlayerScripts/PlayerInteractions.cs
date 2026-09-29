@@ -1,11 +1,7 @@
-using System;
-using JetBrains.Annotations;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
-using Random = UnityEngine.Random;
 
 public class PlayerInteractions : MonoBehaviour
 {
@@ -99,6 +95,7 @@ public class PlayerInteractions : MonoBehaviour
         return (closestComponent, closestGameObject);
     }
 
+    //borrowed from cow and carrot lab
     private void PickUpItem(GameObject item)
     {
         itemInHand = item;

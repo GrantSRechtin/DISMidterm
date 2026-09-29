@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class Pot : MonoBehaviour, IItemInteractable
 {
+    [Header("Objects inside the pot")]
     [SerializeField] private GameObject[] heldGameObjects;
-    [SerializeField] private SpriteRenderer[] srs;
+    [Header("Object audio")]
     [SerializeField] private AudioSource potBreak;
+
+    [SerializeField] private SpriteRenderer[] srs;
 
     private Collider2D potCollider;
 

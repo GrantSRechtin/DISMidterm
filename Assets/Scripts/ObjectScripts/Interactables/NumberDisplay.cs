@@ -14,7 +14,7 @@ public class NumberDisplay : MonoBehaviour, IInteractable
     {
         currentNum = 0;
         textMesh = GetComponentInChildren<TextMeshPro>();
-        fallAfterUse = GetComponent<FallAfterUse>();
+        fallAfterUse = GetComponentInChildren<FallAfterUse>();
     }
 
     public void Interact()

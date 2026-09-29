@@ -1365,10 +1365,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorController
   displays:
-  - {fileID: 1538474836287824002}
-  - {fileID: 3090707705032065757}
-  - {fileID: 5747630132403600348}
-  - {fileID: 7299164655192846715}
+  - {fileID: 1030817150827921719}
+  - {fileID: 3599385739983676264}
+  - {fileID: 6112615244911467113}
+  - {fileID: 9105196106638266574}
   correctCode: 01000000020000000800000007000000
 --- !u!1 &4328247875519462259
 GameObject:
@@ -3984,6 +3984,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.9294118
       objectReference: {fileID: 0}
+    - target: {fileID: 7382715810381821072, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7661878109724839025, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
       propertyPath: m_Name
       value: NumberDisplayTan
@@ -4056,7 +4060,7 @@ PrefabInstance:
       addedObject: {fileID: 1482825981620113407}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5877615234555177037, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
-      insertIndex: 3
+      insertIndex: -1
       addedObject: {fileID: 1997594181767718516}
   m_SourcePrefab: {fileID: 100100000, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
 --- !u!1 &4999684260347767204 stripped
@@ -4077,22 +4081,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FallAfterUse
   breakThreshold: 30
---- !u!114 &7299164655192846715 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8194543779423531154, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
-  m_PrefabInstance: {fileID: 1509560961570570729}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4999684260347767204}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cd5a0e2de309b84b905fbe44ff46d88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
+  fallTicks: 30
+  finalRotation: {x: 0, y: 0, z: -110}
 --- !u!4 &7471930239306924853 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8305386775121330908, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
   m_PrefabInstance: {fileID: 1509560961570570729}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &9105196106638266574 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7687413856721146151, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
+  m_PrefabInstance: {fileID: 1509560961570570729}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cd5a0e2de309b84b905fbe44ff46d88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1001 &1583686309944411461
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5057,6 +5063,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.9843138
       objectReference: {fileID: 0}
+    - target: {fileID: 7382715810381821072, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7661878109724839025, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
       propertyPath: m_Name
       value: NumberDisplayPink
@@ -5125,7 +5135,7 @@ PrefabInstance:
       addedObject: {fileID: 313685940001982680}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5877615234555177037, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
-      insertIndex: 3
+      insertIndex: -1
       addedObject: {fileID: 3491154800161876755}
   m_SourcePrefab: {fileID: 100100000, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
 --- !u!4 &5564716605717858706 stripped
@@ -5133,12 +5143,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8305386775121330908, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
   m_PrefabInstance: {fileID: 4502316504461757262}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5747630132403600348 stripped
+--- !u!114 &6112615244911467113 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8194543779423531154, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
+  m_CorrespondingSourceObject: {fileID: 7687413856721146151, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
   m_PrefabInstance: {fileID: 4502316504461757262}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8064270089824215811}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2cd5a0e2de309b84b905fbe44ff46d88, type: 3}
@@ -5162,6 +5172,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FallAfterUse
   breakThreshold: 30
+  fallTicks: 28
+  finalRotation: {x: 0, y: 0, z: -80}
 --- !u!1001 &4606778612585419890
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5872,6 +5884,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.37647063
       objectReference: {fileID: 0}
+    - target: {fileID: 7382715810381821072, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7661878109724839025, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
       propertyPath: m_Name
       value: NumberDisplayBlue
@@ -5940,7 +5956,7 @@ PrefabInstance:
       addedObject: {fileID: 8494514071167967169}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5877615234555177037, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
-      insertIndex: 3
+      insertIndex: -1
       addedObject: {fileID: 1970149459622935763}
   m_SourcePrefab: {fileID: 100100000, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
 --- !u!1 &778493286133733890 stripped
@@ -5961,17 +5977,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FallAfterUse
   breakThreshold: 30
+  fallTicks: 29
+  finalRotation: {x: 0, y: 0, z: -100}
 --- !u!4 &2890766884905906323 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8305386775121330908, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
   m_PrefabInstance: {fileID: 6583339541419192911}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3090707705032065757 stripped
+--- !u!114 &3599385739983676264 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8194543779423531154, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
+  m_CorrespondingSourceObject: {fileID: 7687413856721146151, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
   m_PrefabInstance: {fileID: 6583339541419192911}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778493286133733890}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2cd5a0e2de309b84b905fbe44ff46d88, type: 3}
@@ -6312,6 +6330,10 @@ PrefabInstance:
       propertyPath: correctNum
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7382715810381821072, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7661878109724839025, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
       propertyPath: m_Name
       value: NumberDisplayRed
@@ -6368,15 +6390,15 @@ PrefabInstance:
       addedObject: {fileID: 325482040833711171}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5877615234555177037, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
-      insertIndex: 3
+      insertIndex: -1
       addedObject: {fileID: 82134640589346191}
   m_SourcePrefab: {fileID: 100100000, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
---- !u!114 &1538474836287824002 stripped
+--- !u!114 &1030817150827921719 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8194543779423531154, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
+  m_CorrespondingSourceObject: {fileID: 7687413856721146151, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
   m_PrefabInstance: {fileID: 7269122682585419792}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3850691458477127773}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2cd5a0e2de309b84b905fbe44ff46d88, type: 3}
@@ -6405,6 +6427,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FallAfterUse
   breakThreshold: 30
+  fallTicks: 28
+  finalRotation: {x: 0, y: 0, z: -90}
 --- !u!1001 &7481222030937083264
 PrefabInstance:
   m_ObjectHideFlags: 0

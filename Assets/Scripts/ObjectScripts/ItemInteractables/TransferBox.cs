@@ -1,13 +1,21 @@
 using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TransferBox : MonoBehaviour, IItemInteractable
 {
     [Header("Other box")]
     [SerializeField] private GameObject connectedBox;
+    [Header("Box side. Left=true, Right=false")]
+    [SerializeField] private bool room;
     
-    private Vector3 itemOffset = new(0,0,0);
-    private Vector3 itemRotation = new(0,0,30);
+    private Vector3 itemOffsetToRight = new(0.09f,0.8f,0);
+    private Vector3 itemRotationToRight = new(0,0,140);
+
+    private Vector3 itemOffsetToLeft = new(-0.07f,0.8f,0);
+    private Vector3 itemRotationToLeft = new(0,0,220);
+
+
 
     public void Interact(GameObject item)
     {
@@ -15,7 +23,16 @@ public class TransferBox : MonoBehaviour, IItemInteractable
 
         Vector3 newItemLocation = connectedBox.transform.position + connectedBoxOffset;
         Vector3 newItemScale = item.transform.lossyScale;
-        Quaternion newItemRotation = Quaternion.Euler(itemRotation);
+        Quaternion newItemRotation;
+        if (room)
+        {
+            newItemRotation = Quaternion.Euler(itemRotationToRight);
+        }
+        else
+        {
+            newItemRotation = Quaternion.Euler(itemRotationToLeft);
+        }
+        
 
 
         GameObject newItem = Instantiate(item, newItemLocation, newItemRotation);
@@ -27,6 +44,17 @@ public class TransferBox : MonoBehaviour, IItemInteractable
 
     public Vector3 GetItemOffset()
     {
-        return itemOffset;
+        if (!room)
+        {
+            Debug.Log("to right");
+            return itemOffsetToRight;
+            
+        }
+        else
+        {
+            Debug.Log("to left");
+            return itemOffsetToLeft;
+            
+        }
     }
 }

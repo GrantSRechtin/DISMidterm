@@ -8,7 +8,7 @@ public class Lock : MonoBehaviour, IItemInteractable
     [SerializeField] private string color;
     
     [Header("Object audio")]
-    [SerializeField] private AudioSource unlock;
+    [SerializeField] private AudioClip unlock;
 
     private bool unlocked = false; 
     private SpriteRenderer[] spriteRenderers;
@@ -27,7 +27,7 @@ public class Lock : MonoBehaviour, IItemInteractable
             Key key = item.GetComponent<Key>();
             if (key.GetColor() == color)
             {
-                unlock.Play();
+                GetComponent<AudioSource>().PlayOneShot(unlock);
                 unlocked = true;
                 Destroy(item);
 

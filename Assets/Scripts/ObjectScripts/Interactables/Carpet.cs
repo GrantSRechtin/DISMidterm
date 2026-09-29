@@ -9,7 +9,7 @@ public class Carpet : MonoBehaviour, IInteractable
     [SerializeField] private Sprite flippedCarpet;
 
     [Header("Object audio")]
-    [SerializeField] private AudioSource carpetSound;
+    [SerializeField] private AudioClip carpetSound;
 
     private SpriteRenderer sr;
 
@@ -32,7 +32,7 @@ public class Carpet : MonoBehaviour, IInteractable
         {
             hiddenObject.GetComponent<IHidden>().Show();
         }
-        carpetSound.Play();
+        GetComponent<AudioSource>().PlayOneShot(carpetSound);
         sr.sprite = flippedCarpet;
 
         GetComponent<Collider2D>().enabled = false;

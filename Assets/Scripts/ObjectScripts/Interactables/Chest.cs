@@ -15,7 +15,7 @@ public class Chest : MonoBehaviour, IInteractable
     [SerializeField] private bool chestOrientation;
     
     [Header("Object audio")]
-    [SerializeField]private AudioSource chestOpen;
+    [SerializeField]private AudioClip chestOpen;
 
     private int interactNum=0;
 
@@ -58,8 +58,8 @@ public class Chest : MonoBehaviour, IInteractable
                     gameObject.transform.position = new Vector3(gameObject.transform.position.x + 0.4f, gameObject.transform.position.y, gameObject.transform.position.z);
                 }
                 interactNum+=1;
-                chestOpen.Play();
-                   
+                
+                GetComponent<AudioSource>().PlayOneShot(chestOpen);
             }
            
             foreach (GameObject hiddenObject in hiddenGameObjects)

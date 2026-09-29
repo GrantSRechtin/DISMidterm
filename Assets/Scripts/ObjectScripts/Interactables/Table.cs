@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
@@ -17,7 +16,7 @@ public class Table : MonoBehaviour, IInteractable
     [SerializeField] private float shiftSteps = 30;
     
     [Header("Object audio")]
-    [SerializeField] private AudioSource moveObject;
+    [SerializeField] private AudioClip moveObject;
 
     private bool singleUse = true;
     private bool interactOutcome = true;
@@ -39,7 +38,7 @@ public class Table : MonoBehaviour, IInteractable
     IEnumerator Shift()
     {
 
-        moveObject.Play();
+        GetComponent<AudioSource>().PlayOneShot(moveObject);
         // Shift to new position
         for (int i = 0; i < shiftSteps; i++)
         {

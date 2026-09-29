@@ -1,11 +1,11 @@
 using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
 public class NumberDisplay : MonoBehaviour, IInteractable
-{
-    [SerializeField] private int correctNum = 0;
-
+{    
+    private FallAfterUse fallAfterUse;
     private TextMeshPro textMesh;
 
     private int currentNum;
@@ -14,10 +14,12 @@ public class NumberDisplay : MonoBehaviour, IInteractable
     {
         currentNum = 0;
         textMesh = GetComponentInChildren<TextMeshPro>();
+        fallAfterUse = GetComponent<FallAfterUse>();
     }
 
     public void Interact()
     {
+        if (fallAfterUse) { fallAfterUse.Step(); }
         if (currentNum < 9)
         {
             currentNum++;
@@ -30,8 +32,10 @@ public class NumberDisplay : MonoBehaviour, IInteractable
         }
     }
 
-    public bool IsCorrect()
+    public int GetNumber()
     {
-        return currentNum == correctNum;
+        return currentNum;
     }
+
+
 }

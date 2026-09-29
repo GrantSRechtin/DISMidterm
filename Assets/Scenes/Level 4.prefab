@@ -2062,8 +2062,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorController
   displays:
-  - {fileID: 7575125640921070584}
-  - {fileID: 417717818934290135}
+  - {fileID: 2054282643694973949}
+  - {fileID: 8101429994792693458}
+  correctCode: 0800000002000000
 --- !u!1 &9169937102735390473
 GameObject:
   m_ObjectHideFlags: 0
@@ -2110,6 +2111,18 @@ PrefabInstance:
       propertyPath: correctNum
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5894267948080781243, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894267948080781243, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894267948080781243, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9921569
+      objectReference: {fileID: 0}
     - target: {fileID: 7661878109724839025, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
       propertyPath: m_Name
       value: NumberDisplayRed
@@ -2125,6 +2138,10 @@ PrefabInstance:
     - target: {fileID: 7810442216051332137, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
       propertyPath: m_Color.r
       value: 0.99607843
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194543779423531154, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
+      propertyPath: correctNum
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8305386775121330908, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2171,9 +2188,9 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
---- !u!114 &417717818934290135 stripped
+--- !u!114 &8101429994792693458 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 295788049937266839, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8194543779423531154, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
   m_PrefabInstance: {fileID: 132523649700535872}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -3880,6 +3897,18 @@ PrefabInstance:
       propertyPath: correctNum
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 5894267948080781243, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
+      propertyPath: m_Color.b
+      value: 0.054901965
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894267948080781243, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
+      propertyPath: m_Color.g
+      value: 0.18431373
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894267948080781243, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
+      propertyPath: m_Color.r
+      value: 0.39607847
+      objectReference: {fileID: 0}
     - target: {fileID: 7661878109724839025, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
       propertyPath: m_Name
       value: NumberDisplayBrown
@@ -3895,6 +3924,10 @@ PrefabInstance:
     - target: {fileID: 7810442216051332137, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
       propertyPath: m_Color.r
       value: 0.3647059
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194543779423531154, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
+      propertyPath: correctNum
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8305386775121330908, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3941,14 +3974,9 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
---- !u!4 &2195557921654882739 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8305386775121330908, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
-  m_PrefabInstance: {fileID: 7870771561397830511}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7575125640921070584 stripped
+--- !u!114 &2054282643694973949 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 295788049937266839, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8194543779423531154, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
   m_PrefabInstance: {fileID: 7870771561397830511}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -3957,6 +3985,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cd5a0e2de309b84b905fbe44ff46d88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+--- !u!4 &2195557921654882739 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8305386775121330908, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
+  m_PrefabInstance: {fileID: 7870771561397830511}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8361735974340900228
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1463,6 +1463,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2650764747626880381}
     m_Modifications:
     - target: {fileID: 4446569056412170470, guid: f08cb3710c5474a4888cdae320c56632, type: 3}
+      propertyPath: room
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4446569056412170470, guid: f08cb3710c5474a4888cdae320c56632, type: 3}
       propertyPath: connectedBox
       value: 
       objectReference: {fileID: 2439159923372416126}

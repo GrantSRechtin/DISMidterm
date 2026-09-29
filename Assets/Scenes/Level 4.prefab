@@ -2062,9 +2062,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorController
   displays:
-  - {fileID: 2054282643694973949}
-  - {fileID: 8101429994792693458}
-  correctCode: 0800000002000000
+  - {fileID: 546544299238150728}
+  - {fileID: 7744502109314912103}
+  standardCode: 0800000002000000
+  secretCode1: 
+  secretCode2: 
 --- !u!1 &9169937102735390473
 GameObject:
   m_ObjectHideFlags: 0
@@ -2188,9 +2190,9 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
---- !u!114 &8101429994792693458 stripped
+--- !u!114 &7744502109314912103 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8194543779423531154, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
+  m_CorrespondingSourceObject: {fileID: 7687413856721146151, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
   m_PrefabInstance: {fileID: 132523649700535872}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -3614,6 +3616,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 6177621673333037718}
     m_Modifications:
     - target: {fileID: 4446569056412170470, guid: f08cb3710c5474a4888cdae320c56632, type: 3}
+      propertyPath: room
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4446569056412170470, guid: f08cb3710c5474a4888cdae320c56632, type: 3}
       propertyPath: connectedBox
       value: 
       objectReference: {fileID: 1767532812800995321}
@@ -3974,9 +3980,9 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
---- !u!114 &2054282643694973949 stripped
+--- !u!114 &546544299238150728 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8194543779423531154, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
+  m_CorrespondingSourceObject: {fileID: 7687413856721146151, guid: 5c54c684c58c4414a962e416a098a20b, type: 3}
   m_PrefabInstance: {fileID: 7870771561397830511}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}

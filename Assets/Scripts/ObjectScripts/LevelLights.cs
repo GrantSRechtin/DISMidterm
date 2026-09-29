@@ -12,4 +12,10 @@ public class LevelLights : MonoBehaviour
         leftLight.color = left ? Color.green : Color.red;
         rightLight.color = right ? Color.green : Color.red;
     }
+
+    public void UpdateLightsColors(Color left, Color right)
+    {
+        leftLight.color = left;
+        rightLight.color = right;
+    }
 }

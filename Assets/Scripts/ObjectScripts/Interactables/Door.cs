@@ -13,7 +13,12 @@ public class Door : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        if (levelController.IsLevelComplete())
+        int secretScene = levelController.CheckSecretCompletion();
+        if (secretScene >= 0)
+        {
+            SceneManager.LoadScene(secretScene);
+        }
+        else if (levelController.IsLevelComplete())
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
         }

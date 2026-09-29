@@ -65,4 +65,9 @@ public class StartDoor : MonoBehaviour, IInteractable, ILevelCompletion
     {
         return mainPlayerReady;
     }
+
+    public bool GetSecretStatus(int secret)
+    {
+        return GetStatus();
+    }
 }

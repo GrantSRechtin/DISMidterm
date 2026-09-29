@@ -15,4 +15,9 @@ public class DoorLock : MonoBehaviour, ILevelCompletion
     {
         return lockScript.IsUnlocked();
     }
+
+    public bool GetSecretStatus(int secret)
+    {
+        return GetStatus();
+    }
 }

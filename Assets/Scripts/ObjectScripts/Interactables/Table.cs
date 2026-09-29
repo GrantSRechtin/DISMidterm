@@ -7,11 +7,19 @@ using UnityEngine;
 
 public class Table : MonoBehaviour, IInteractable
 {
+    [Header("Objects disabed by the table")]
     [SerializeField] private GameObject[] disabledGameObjects;
-    [SerializeField] private Vector3 shift = new(0.25f,0.5f,0);
-    [SerializeField] private float shiftSteps = 30;
-    [SerializeField] private bool singleUse = true;
 
+    [Header("Shift position")]
+    [SerializeField] private Vector3 shift = new(0.25f,0.5f,0);
+
+    [Header("Movement steps")]
+    [SerializeField] private float shiftSteps = 30;
+    
+    [Header("Object audio")]
+    [SerializeField] private AudioSource moveObject;
+
+    private bool singleUse = true;
     private bool interactOutcome = true;
 
     void Start()
@@ -30,6 +38,8 @@ public class Table : MonoBehaviour, IInteractable
 
     IEnumerator Shift()
     {
+
+        moveObject.Play();
         // Shift to new position
         for (int i = 0; i < shiftSteps; i++)
         {

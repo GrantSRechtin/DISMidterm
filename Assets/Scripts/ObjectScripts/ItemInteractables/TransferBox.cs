@@ -3,9 +3,11 @@ using UnityEngine;
 
 public class TransferBox : MonoBehaviour, IItemInteractable
 {
+    [Header("Other box")]
     [SerializeField] private GameObject connectedBox;
-    [SerializeField] private Vector3 itemOffset = new(0,0,0);
-    [SerializeField] private Vector3 itemRotation = new(0,0,30);
+    
+    private Vector3 itemOffset = new(0,0,0);
+    private Vector3 itemRotation = new(0,0,30);
 
     public void Interact(GameObject item)
     {

@@ -2,8 +2,14 @@ using UnityEngine;
 
 public class Carpet : MonoBehaviour, IInteractable
 {
+    [Header("Objects hidden by the carpet")]
     [SerializeField] private GameObject[] hiddenGameObjects;
+    
+    [Header("Flipped carpet sprite")]
     [SerializeField] private Sprite flippedCarpet;
+
+    [Header("Object audio")]
+    [SerializeField] private AudioSource carpetSound;
 
     private SpriteRenderer sr;
 
@@ -26,6 +32,7 @@ public class Carpet : MonoBehaviour, IInteractable
         {
             hiddenObject.GetComponent<IHidden>().Show();
         }
+        carpetSound.Play();
         sr.sprite = flippedCarpet;
 
         GetComponent<Collider2D>().enabled = false;

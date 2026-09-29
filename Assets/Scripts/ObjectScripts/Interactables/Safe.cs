@@ -2,10 +2,13 @@ using UnityEngine;
 
 public class Safe : MonoBehaviour, IInteractable
 {
+    [Header("Item(s) inside of safe")]
     [SerializeField] private GameObject[] hiddenGameObjects;
+    
+    [Header("Open safe sprite")]
     [SerializeField] private Sprite openSafe;
 
-    [Header("Safe's lock GameObject")]
+    [Header("Safe lock GameObject")]
     [SerializeField] private GameObject safeLock;
 
     private SpriteRenderer sr;

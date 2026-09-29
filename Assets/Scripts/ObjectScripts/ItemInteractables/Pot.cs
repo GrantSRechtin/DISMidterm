@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class Pot : MonoBehaviour, IItemInteractable
 {
+    [Header("Objects inside the pot")]
     [SerializeField] private GameObject[] heldGameObjects;
+    [Header("Object audio")]
+    [SerializeField] private AudioSource potBreak;
+
     [SerializeField] private SpriteRenderer[] srs;
 
     private Collider2D potCollider;
@@ -32,6 +36,7 @@ public class Pot : MonoBehaviour, IItemInteractable
             {
                 sr.enabled = false;
             }
+            potBreak.Play();
             foreach (GameObject disabledObject in heldGameObjects)
             {
                 Collider2D collider = disabledObject.GetComponent<Collider2D>();

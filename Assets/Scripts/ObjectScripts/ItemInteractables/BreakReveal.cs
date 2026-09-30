@@ -2,7 +2,7 @@ using JetBrains.Annotations;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Pot : MonoBehaviour, IItemInteractable
+public class BreakReveal : MonoBehaviour, IItemInteractable
 {
     [Header("Objects inside the pot")]
     [SerializeField] private GameObject[] heldGameObjects;

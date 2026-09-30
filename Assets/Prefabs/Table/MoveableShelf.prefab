@@ -162,7 +162,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 6c0556cf6a2854cabae41d86c47eb7ee, type: 3}
     - target: {fileID: 6098356476362057483, guid: c184d12cd82d67f4db00c1ac93ebcdc3, type: 3}
       propertyPath: shiftSteps
-      value: 30
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 6098356476362057483, guid: c184d12cd82d67f4db00c1ac93ebcdc3, type: 3}
       propertyPath: disabledGameObjects.Array.size

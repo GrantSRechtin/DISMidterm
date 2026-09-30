@@ -1,6 +1,3 @@
-using JetBrains.Annotations;
-using Mono.Cecil.Cil;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class NumberDisplayController : MonoBehaviour, ILevelCompletion

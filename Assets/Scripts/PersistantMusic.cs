@@ -59,7 +59,7 @@ public class PersistantMusic : MonoBehaviour
     private void SecretPitchCheck()
     {
         LevelController levelController = FindFirstObjectByType<LevelController>();
-        if (levelController != null && levelController.CheckSecretCompletion() >= 0)
+        if (levelController != null && levelController.IsSecretActive())
         {
             currentPlaylist = secretPlaylist;
             if (audioSource.pitch != secretPitch)

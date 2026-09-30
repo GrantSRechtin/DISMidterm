@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -20,6 +19,7 @@ public class LevelController : MonoBehaviour
     [SerializeField] private AudioClip greenDing;
 
     private bool levelComplete = false;
+    private bool secretActive = false;
 
     private void Start()
     {
@@ -72,6 +72,11 @@ public class LevelController : MonoBehaviour
         return levelComplete;
     }
 
+    public bool IsSecretActive()
+    {
+        return secretActive;
+    }
+
     public int CheckSecretCompletion()
     {
         int secretCompleted = -1;
@@ -89,6 +94,7 @@ public class LevelController : MonoBehaviour
         if (secretCompleted >= 0)
         {
             levelComplete = true;
+            secretActive = true;
             leftLights.UpdateLightsColors(Color.black, Color.black);
             rightLights.UpdateLightsColors(Color.black, Color.black);
 

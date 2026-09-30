@@ -1,10 +1,9 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
 
-public class Table : MonoBehaviour, IInteractable
+public class MoveReveal : MonoBehaviour, IInteractable
 {
     [Header("Objects disabed by the table")]
     [SerializeField] private GameObject[] disabledGameObjects;

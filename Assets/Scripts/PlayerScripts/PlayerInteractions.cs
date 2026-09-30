@@ -102,12 +102,6 @@ public class PlayerInteractions : MonoBehaviour
         item.transform.SetParent(transform);
         item.transform.localPosition = Vector3.up * 0.25f;
 
-        // // Temporary solution for hammer
-        // if (item.CompareTag("Hammer"))
-        // {
-        //     item.transform.localScale = item.transform.localScale / .8f;
-        // }
-
         item.GetComponent<SortingGroup>().sortingOrder = 2;
     }
 
@@ -116,12 +110,6 @@ public class PlayerInteractions : MonoBehaviour
         itemInHand = null;
         item.transform.SetParent(transform.parent);
         item.transform.localPosition += Vector3.down * 0.75f;
-
-        // // Temporary solution for hammer
-        // if (item.CompareTag("Hammer"))
-        // {
-        //     item.transform.localScale = item.transform.localScale * .8f;
-        // }
 
         item.GetComponent<SortingGroup>().sortingOrder = 0;
     }

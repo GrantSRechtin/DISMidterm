@@ -1,7 +1,6 @@
 using System.Collections;
 using Unity.Mathematics;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 [RequireComponent(typeof(Collider2D))]
 [RequireComponent(typeof(SpriteRenderer))]
@@ -51,9 +50,4 @@ public class Hammer : MonoBehaviour, IInteractable, IItem, IHidden
             yield return new WaitForFixedUpdate();
         }
     }
-
-    void Awake(){}
-    void Start(){}
-    void Update(){}
-    void FixedUpdate(){}
 }

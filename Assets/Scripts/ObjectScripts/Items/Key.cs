@@ -37,9 +37,4 @@ public class Key : MonoBehaviour, IInteractable, IItem, IHidden
     {
         return color;
     }
-
-    void Awake(){}
-    void Start(){}
-    void Update(){}
-    void FixedUpdate(){}
 }

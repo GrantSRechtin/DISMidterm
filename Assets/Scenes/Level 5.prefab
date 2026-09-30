@@ -1375,7 +1375,7 @@ MonoBehaviour:
   - {fileID: 9105196106638266574}
   standardCode: 01000000020000000800000007000000
   secretCode1: 05000000070000000200000008000000
-  secretCode2: ffffffffffffffffffffffffffffffff
+  secretCode2: 03000000030000000900000004000000
 --- !u!1 &4328247875519462259
 GameObject:
   m_ObjectHideFlags: 0
@@ -4795,12 +4795,32 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4157117581284837078}
     - target: {fileID: 1965853127757934553, guid: fc2cad3ab8d5de14e823e740fdc893fe, type: 3}
+      propertyPath: secretColors.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1965853127757934553, guid: fc2cad3ab8d5de14e823e740fdc893fe, type: 3}
       propertyPath: secretLevels.Array.size
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1965853127757934553, guid: fc2cad3ab8d5de14e823e740fdc893fe, type: 3}
       propertyPath: 'secretLevels.Array.data[0]'
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1965853127757934553, guid: fc2cad3ab8d5de14e823e740fdc893fe, type: 3}
+      propertyPath: 'secretLevels.Array.data[1]'
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1965853127757934553, guid: fc2cad3ab8d5de14e823e740fdc893fe, type: 3}
+      propertyPath: secretColors.Array.data[1].b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1965853127757934553, guid: fc2cad3ab8d5de14e823e740fdc893fe, type: 3}
+      propertyPath: secretColors.Array.data[1].g
+      value: 0.082345486
+      objectReference: {fileID: 0}
+    - target: {fileID: 1965853127757934553, guid: fc2cad3ab8d5de14e823e740fdc893fe, type: 3}
+      propertyPath: secretColors.Array.data[1].r
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5287172646736179401, guid: fc2cad3ab8d5de14e823e740fdc893fe, type: 3}
       propertyPath: m_Name

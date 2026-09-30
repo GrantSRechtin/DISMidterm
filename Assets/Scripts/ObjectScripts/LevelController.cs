@@ -12,8 +12,11 @@ public class LevelController : MonoBehaviour
     [SerializeField] private GameObject leftCompletion;
     [SerializeField] private GameObject rightCompletion;
 
-    [Header("Number of Secret Ways to Complete Level")]
+    [Header("Secret level luild indexes")]
     [SerializeField] private int[] secretLevels;
+    
+    [Header("Secret level light colors")]
+    [SerializeField] private Color[] secretColors;
 
     [Header("Object audio")]
     [SerializeField] private AudioClip greenDing;
@@ -95,8 +98,12 @@ public class LevelController : MonoBehaviour
         {
             levelComplete = true;
             secretActive = true;
-            leftLights.UpdateLightsColors(Color.black, Color.black);
-            rightLights.UpdateLightsColors(Color.black, Color.black);
+
+            Color lightColor = secretColors[secretCompleted];
+            lightColor.a = 1f;
+            
+            leftLights.UpdateLightsColors(lightColor, lightColor);
+            rightLights.UpdateLightsColors(lightColor, lightColor);
 
             return secretLevels[secretCompleted];
         }

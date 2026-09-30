@@ -154,7 +154,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Carpet
   hiddenGameObjects: []
   flippedCarpet: {fileID: 4740886214691312125, guid: 896d3e02e23e2d34d9d7126f3c82e283, type: 3}
-  carpetSound: {fileID: 8300000, guid: 20b77eefae63448749ea619cbb1015db, type: 3}
+  waitTime: 0.75
+  carpetSound: {fileID: 8300000, guid: b2e89e27d8f6d2a48bc5277fb4ab64b5, type: 3}
 --- !u!82 &3212622194142521626
 AudioSource:
   m_ObjectHideFlags: 0

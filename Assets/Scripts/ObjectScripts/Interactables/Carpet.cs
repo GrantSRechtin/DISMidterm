@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Carpet : MonoBehaviour, IInteractable
@@ -7,6 +8,9 @@ public class Carpet : MonoBehaviour, IInteractable
     
     [Header("Flipped carpet sprite")]
     [SerializeField] private Sprite flippedCarpet;
+
+    [Header("Delay on use before carpet flips")]
+    [SerializeField] private float waitTime;
 
     [Header("Object audio")]
     [SerializeField] private AudioClip carpetSound;
@@ -28,13 +32,23 @@ public class Carpet : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        GetComponent<AudioSource>().PlayOneShot(carpetSound);
+        GetComponent<Collider2D>().enabled = false;
+        StartCoroutine(UncoverDelay());
+    }
+
+    private void FlipCarpet()
+    {
         foreach (GameObject hiddenObject in hiddenGameObjects)
         {
             hiddenObject.GetComponent<IHidden>().Show();
         }
-        GetComponent<AudioSource>().PlayOneShot(carpetSound);
         sr.sprite = flippedCarpet;
+    }
 
-        GetComponent<Collider2D>().enabled = false;
+    IEnumerator UncoverDelay()
+    {
+        yield return new WaitForSeconds(waitTime);
+        FlipCarpet();
     }
 }

@@ -138,7 +138,7 @@ MonoBehaviour:
   - {fileID: 0}
   shift: {x: 0.25, y: 0.5, z: 0}
   shiftSteps: 60
-  moveObject: {fileID: 8300000, guid: 6c0556cf6a2854cabae41d86c47eb7ee, type: 3}
+  moveObject: {fileID: 8300000, guid: 5c825b0906170594a9af3d2dbc68aa48, type: 3}
 --- !u!82 &-1062542215721824359
 AudioSource:
   m_ObjectHideFlags: 0

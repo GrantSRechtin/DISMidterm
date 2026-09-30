@@ -10,6 +10,8 @@ public class Safe : MonoBehaviour, IInteractable
 
     [Header("Safe lock GameObject")]
     [SerializeField] private GameObject safeLock;
+    [Header("Safe Opening Sound")]
+    [SerializeField] private AudioClip safeOpen;
 
     private SpriteRenderer sr;
 
@@ -44,6 +46,7 @@ public class Safe : MonoBehaviour, IInteractable
             {
                 hiddenObject.GetComponent<IHidden>().Show();
             }
+            GetComponent<AudioSource>().PlayOneShot(safeOpen);
             sr.sprite = openSafe;
 
             GetComponent<Collider2D>().enabled = false;

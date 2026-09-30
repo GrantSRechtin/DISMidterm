@@ -30,10 +30,8 @@ public class Safe : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        Debug.Log("safe interacted with");
         if (safeLock == null)
         {
-            Debug.Log("safe lock not assigned");
             return;
            
         }
@@ -41,7 +39,6 @@ public class Safe : MonoBehaviour, IInteractable
         Lock safelock = safeLock.GetComponent<Lock>();
         if (safelock.IsUnlocked())
         {
-            Debug.Log("safe unlocked");
             foreach (GameObject hiddenObject in hiddenGameObjects)
             {
                 hiddenObject.GetComponent<IHidden>().Show();

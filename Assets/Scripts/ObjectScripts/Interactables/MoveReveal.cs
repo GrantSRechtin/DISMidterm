@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class MoveReveal : MonoBehaviour, IInteractable
 {
-    [Header("Objects disabed by the table")]
+    [Header("Objects to be disabled")]
     [SerializeField] private GameObject[] disabledGameObjects;
 
     [Header("Shift position")]

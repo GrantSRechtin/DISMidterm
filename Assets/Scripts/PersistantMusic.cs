@@ -83,4 +83,17 @@ public class PersistantMusic : MonoBehaviour
         playlistIndex = (playlistIndex + 1) % currentPlaylist.Length;
         PlayTrack(playlistIndex);
     }
+
+    public static void StopMusic()
+    {
+        // used a bit of ai assistance to determine how to disable in later scenes
+        
+        if (instance == null)
+        {
+            return;
+        }
+
+        instance.audioSource.Stop();
+        instance.enabled = false;
+    }
 }

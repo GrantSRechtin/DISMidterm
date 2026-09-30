@@ -36,6 +36,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Secret Level 2.unity
     guid: e8f339e38086f4852ae90764380eb8f2
   - enabled: 1
+    path: Assets/Scenes/Rubber Room.unity
+    guid: 336f909a7644419488762f7572b13c1b
+  - enabled: 1
     path: Assets/Scenes/Secret Ending 2.unity
     guid: d57efba441e1476468f4603298869df1
   m_configObjects:

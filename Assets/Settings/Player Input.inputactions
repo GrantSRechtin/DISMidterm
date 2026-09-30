@@ -25,6 +25,16 @@
                     "interactions": "",
                     "initialStateCheck": false,
                     "priority": 0
+                },
+                {
+                    "name": "RestartStage",
+                    "type": "Button",
+                    "id": "04223f31-c880-495c-85f1-bf1f5a04770a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
                 }
             ],
             "bindings": [
@@ -93,6 +103,17 @@
                     "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ddcaf279-7e76-4336-8c01-7557b2fef654",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RestartStage",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -114,6 +135,16 @@
                     "name": "Interact",
                     "type": "Button",
                     "id": "9c3817d7-15ed-425e-9180-c7226f9b4e46",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "RestartGame",
+                    "type": "Button",
+                    "id": "719b888d-d5f9-464f-a997-752991abf5cb",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -185,6 +216,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8bf3ff76-8938-4f3f-82a4-d9f16d71b83d",
+                    "path": "<Keyboard>/backspace",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RestartGame",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

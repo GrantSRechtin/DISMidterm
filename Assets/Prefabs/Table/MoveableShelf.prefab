@@ -159,7 +159,7 @@ PrefabInstance:
     - target: {fileID: 6098356476362057483, guid: c184d12cd82d67f4db00c1ac93ebcdc3, type: 3}
       propertyPath: moveObject
       value: 
-      objectReference: {fileID: 8300000, guid: 6c0556cf6a2854cabae41d86c47eb7ee, type: 3}
+      objectReference: {fileID: 8300000, guid: 5c825b0906170594a9af3d2dbc68aa48, type: 3}
     - target: {fileID: 6098356476362057483, guid: c184d12cd82d67f4db00c1ac93ebcdc3, type: 3}
       propertyPath: shiftSteps
       value: 60

@@ -113,4 +113,14 @@ public class PlayerInteractions : MonoBehaviour
 
         item.GetComponent<SortingGroup>().sortingOrder = 0;
     }
+
+    private void OnRestartStage(InputValue value)
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    private void OnRestartGame(InputValue value)
+    {
+        SceneManager.LoadScene(0);
+    }
 }

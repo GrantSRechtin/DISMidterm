@@ -1,5 +1,7 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class LevelController : MonoBehaviour
 {
@@ -22,6 +24,20 @@ public class LevelController : MonoBehaviour
     private void Start()
     {
         UpdateLevelStatus();
+    }
+
+    private void Update()
+    {
+        if (Keyboard.current.deleteKey.wasPressedThisFrame)
+        {
+            Debug.Log("delete key pressed");
+            RestartGame();
+        }
+    }
+
+    private void RestartGame()
+    {
+        SceneManager.LoadScene(0);
     }
 
     private bool left;

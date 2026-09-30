@@ -1,6 +1,7 @@
 using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class TransferBox : MonoBehaviour, IItemInteractable
 {
@@ -38,6 +39,13 @@ public class TransferBox : MonoBehaviour, IItemInteractable
         GameObject newItem = Instantiate(item, newItemLocation, newItemRotation);
         newItem.transform.localScale = newItemScale;
         newItem.GetComponent<Collider2D>().enabled = true;
+        newItem.GetComponent<SortingGroup>().sortingOrder = -1;
+
+        // // Temporary solution for hammer
+        // if (newItem.CompareTag("Hammer"))
+        // {
+        //     newItem.transform.localScale = newItem.transform.localScale * .8f;
+        // }
 
         Destroy(item);
     }

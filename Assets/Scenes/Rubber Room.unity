@@ -991,7 +991,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68866c4e82008664aa2d26ff0bbf0f14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AppearAfterDelay
-  delay: 24
+  delay: 32
 --- !u!4 &566186159 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7680723766101248708, guid: 4ab9beb967f190f49beee2eabdd49a5d, type: 3}
@@ -1554,7 +1554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68866c4e82008664aa2d26ff0bbf0f14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AppearAfterDelay
-  delay: 24
+  delay: 32
 --- !u!4 &742528641 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7680723766101248708, guid: 4ab9beb967f190f49beee2eabdd49a5d, type: 3}
@@ -2753,7 +2753,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3397789384056885307}
   m_Layer: 0
-  m_Name: Level 0
+  m_Name: Rubber Room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

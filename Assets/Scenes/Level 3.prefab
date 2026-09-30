@@ -2850,6 +2850,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2472651271363878561, guid: 149f60a9ee6db254e9e59f3c17211cfb, type: 3}
     - target: {fileID: 8134374361466580966, guid: 903027c5443c9af4bb01ea283636cc00, type: 3}
+      propertyPath: potBreak
+      value: 
+      objectReference: {fileID: 8300000, guid: b0bc96d8cc6c84e15ae0f1c57dc99036, type: 3}
+    - target: {fileID: 8134374361466580966, guid: 903027c5443c9af4bb01ea283636cc00, type: 3}
       propertyPath: srs.Array.size
       value: 2
       objectReference: {fileID: 0}

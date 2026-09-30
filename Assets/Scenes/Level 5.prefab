@@ -4730,6 +4730,10 @@ PrefabInstance:
       propertyPath: secretLevels.Array.size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1965853127757934553, guid: fc2cad3ab8d5de14e823e740fdc893fe, type: 3}
+      propertyPath: 'secretLevels.Array.data[0]'
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5287172646736179401, guid: fc2cad3ab8d5de14e823e740fdc893fe, type: 3}
       propertyPath: m_Name
       value: LevelController
@@ -5678,6 +5682,10 @@ PrefabInstance:
       propertyPath: sr
       value: 
       objectReference: {fileID: 2472651271363878561}
+    - target: {fileID: 8134374361466580966, guid: 903027c5443c9af4bb01ea283636cc00, type: 3}
+      propertyPath: potBreak
+      value: 
+      objectReference: {fileID: 8300000, guid: b0bc96d8cc6c84e15ae0f1c57dc99036, type: 3}
     - target: {fileID: 8134374361466580966, guid: 903027c5443c9af4bb01ea283636cc00, type: 3}
       propertyPath: srs.Array.size
       value: 2

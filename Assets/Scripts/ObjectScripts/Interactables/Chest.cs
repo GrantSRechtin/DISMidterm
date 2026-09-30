@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Chest : MonoBehaviour, IInteractable
@@ -14,6 +15,9 @@ public class Chest : MonoBehaviour, IInteractable
     [Header("Chest placement. Chest left=true, Chest right=false")]
     [SerializeField] private bool chestOrientation;
     
+    [Header("Delay on use before chest open")]
+    [SerializeField]private float waitTime;
+
     [Header("Object audio")]
     [SerializeField]private AudioClip chestOpen;
 
@@ -43,29 +47,40 @@ public class Chest : MonoBehaviour, IInteractable
         Lock chestlock = chestLock.GetComponent<Lock>();
         if (chestlock.IsUnlocked())
         {
+            GetComponent<AudioSource>().PlayOneShot(chestOpen);
+            interactNum+=1;
 
-            SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-            if (spriteRenderer != null && openChestSprite != null)
-            {
-                spriteRenderer.sprite = openChestSprite;
-                if (chestOrientation)
-                {
-                    gameObject.transform.position = new Vector3(gameObject.transform.position.x - 0.4f, gameObject.transform.position.y, gameObject.transform.position.z);
-                    
-                }
-                else
-                {
-                    gameObject.transform.position = new Vector3(gameObject.transform.position.x + 0.4f, gameObject.transform.position.y, gameObject.transform.position.z);
-                }
-                interactNum+=1;
-                
-                GetComponent<AudioSource>().PlayOneShot(chestOpen);
-            }
-           
-            foreach (GameObject hiddenObject in hiddenGameObjects)
-            {
-                hiddenObject.GetComponent<IHidden>().Show();
-            }
+            StartCoroutine(OpenDelay());
         }
+    }
+
+    private void Open()
+    {
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer != null && openChestSprite != null)
+        {
+            spriteRenderer.sprite = openChestSprite;
+            if (chestOrientation)
+            {
+                gameObject.transform.position = new Vector3(gameObject.transform.position.x - 0.4f, gameObject.transform.position.y, gameObject.transform.position.z);
+                
+            }
+            else
+            {
+                gameObject.transform.position = new Vector3(gameObject.transform.position.x + 0.4f, gameObject.transform.position.y, gameObject.transform.position.z);
+            }
+            interactNum+=1;
+        }
+        
+        foreach (GameObject hiddenObject in hiddenGameObjects)
+        {
+            hiddenObject.GetComponent<IHidden>().Show();
+        }
+    }
+
+    IEnumerator OpenDelay()
+    {
+        yield return new WaitForSeconds(waitTime);
+        Open();
     }
 }

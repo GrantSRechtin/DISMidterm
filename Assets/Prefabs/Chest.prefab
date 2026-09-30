@@ -333,6 +333,7 @@ MonoBehaviour:
   chestLock: {fileID: 1342083111645306086}
   openChestSprite: {fileID: 126841347826988226, guid: cc75a100e9071ea4db2755f7ac795597, type: 3}
   chestOrientation: 0
+  waitTime: 0.6
   chestOpen: {fileID: 8300000, guid: ac3310ae037bc4e1ea853faed45c1663, type: 3}
 --- !u!82 &8841836970652521521
 AudioSource:

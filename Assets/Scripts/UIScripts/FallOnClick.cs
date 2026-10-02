@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class F : MonoBehaviour
+public class FallOnClick : MonoBehaviour
 {
 
     private Rigidbody2D rb;

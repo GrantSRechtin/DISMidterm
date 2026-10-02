@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class NumberDisplayController : MonoBehaviour, ILevelCompletion
@@ -5,8 +6,7 @@ public class NumberDisplayController : MonoBehaviour, ILevelCompletion
     [SerializeField] NumberDisplay[] displays;
     [SerializeField] int[] standardCode;
 
-    [SerializeField] int[] secretCode1;
-    [SerializeField] int[] secretCode2;
+    [SerializeField] ArrayInt[] secretCodes;
 
     public bool GetStatus()
     {
@@ -22,11 +22,9 @@ public class NumberDisplayController : MonoBehaviour, ILevelCompletion
 
     public bool GetSecretStatus(int secret)
     {
-        int[] code = secret == 0 ? secretCode1 : secretCode2;
-
         for (int i = 0; i < displays.Length; i++)
         {
-            if (displays[i].GetNumber() != code[i])
+            if (displays[i].GetNumber() != secretCodes[secret][i])
             {
                 return false;
             }
